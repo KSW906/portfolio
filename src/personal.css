@@ -1,75 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
-
-/* Personal archive redesign — intentionally layered on top of the original layout. */
-:root{--paper:#f8f5ee;--ink:#252b27;--muted:#686e65;--accent:#254bc8;--line:#dedbd1;--soft:#efeadf;--white:#fffdf8;--max:1260px}
-html,body{background:var(--paper)}
-body{background-image:radial-gradient(#c7c3b7 0.65px,transparent .65px);background-size:18px 18px;background-attachment:fixed}
-::selection{background:#e4fa7e;color:#202721}
+/* Kim Hui Yeon • Warm Growth Archive — private review branch */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Gowun+Dodum&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+:root{--paper:#f5eee4;--ink:#322f2a;--muted:#706b63;--accent:#687e5c;--line:#e1d6c8;--soft:#efe5d8;--white:#fff9f0;--max:1240px}
+*{box-sizing:border-box}
+html,body{background:var(--paper);color:var(--ink)}
+body{background-image:radial-gradient(circle at 8% 12%,#f4dccb 0,transparent 26%),radial-gradient(circle at 89% 28%,#dce7d7 0,transparent 26%),linear-gradient(145deg,#f7efe4,#f1e9db 60%,#f5eee4);background-attachment:fixed;font-family:"Noto Sans KR",sans-serif}
+::selection{background:#e3c5af;color:#29241e}
 .page{padding-bottom:0}
-.header{height:86px;background:rgba(248,245,238,.92);border-bottom:1.5px solid var(--ink)}
-.brand{letter-spacing:.09em;font-weight:800}
-.brand .dot{background:#d9f467;border:2px solid #1f2b27;width:14px;height:14px;border-radius:4px;transform:rotate(-14deg)}
-.header nav{color:var(--ink);font-weight:700;gap:30px}
-.header nav a:hover{color:var(--accent)}
-.eyebrow{font-weight:800;color:var(--accent);font-size:12px;letter-spacing:.17em}
-.hero{padding:90px 0 130px;gap:5vw;grid-template-columns:1fr 1fr;min-height:720px}
-.heroCopy{position:relative;z-index:1}
-.heroCopy:before{content:"A PERSONAL ARCHIVE  /  2024—NOW";display:inline-block;border:1px solid var(--ink);padding:9px 14px;border-radius:40px;transform:rotate(-3deg);font:700 10px 'DM Sans',sans-serif;letter-spacing:.11em;background:#e6f77b;margin-bottom:30px}
-.hero h1{font-size:clamp(88px,9vw,146px);line-height:1.06;letter-spacing:-.085em;color:#232b26;position:relative}
-.hero h1:after{content:"✳";position:absolute;font-size:36px;color:var(--accent);top:-20px;margin-left:12px;transform:rotate(14deg)}
-.heroLine{font-size:clamp(25px,2.65vw,39px);letter-spacing:-.055em;line-height:1.36}
-.lead{font-size:16px;color:#5f665e;max-width:530px}
-.actions{gap:12px;flex-wrap:wrap}
-.primary,.secondary{border:1.5px solid var(--ink);border-radius:100px;padding:14px 20px;font-size:13px;transition:transform .2s,box-shadow .2s}
-.primary{background:var(--ink);color:#fff}
-.secondary{background:var(--white);color:var(--ink)}
-.primary:hover,.secondary:hover{transform:translate(-3px,-3px);box-shadow:4px 4px 0 #254bc8}
-.heroPanel{height:560px;isolation:isolate}
-.heroPanel:before{content:"FIELD NOTES / 001";position:absolute;z-index:-1;left:5%;top:5%;font:800 11px 'DM Sans',sans-serif;letter-spacing:.15em;color:var(--accent)}
-.heroPanel:after{content:"KEEP GROWING ↗";position:absolute;z-index:5;right:2%;bottom:2%;background:#e2fa86;border:1.5px solid var(--ink);border-radius:50%;width:106px;height:106px;display:flex;align-items:center;justify-content:center;text-align:center;font:800 13px 'DM Sans',sans-serif;transform:rotate(14deg)}
-.heroCard{background:#fffdf8;border:1.5px solid #30342e;border-radius:3px;box-shadow:12px 14px 0 rgba(31,38,32,.13);width:min(365px,82%);height:193px;padding:25px}
-.heroCard span{color:var(--accent);font-size:13px}
-.heroCard strong{letter-spacing:-.05em}
-.heroCardA{background:#f6f1e4;transform:translate(-51px,-125px) rotate(-8deg)}
-.heroCardB{background:#dce6ff;transform:translate(61px,2px) rotate(6deg)}
-.heroCardC{background:#e8f7c4;transform:translate(-23px,145px) rotate(-4deg)}
-.intro{padding:125px 0 105px;border-top:2px solid var(--ink)}
-.intro h2,.sectionHead h2,.volunteer h2,.language h2,.closing h2{line-height:1.13;letter-spacing:-.065em}
-.introText p{font-size:17px;color:#4f5950}
-.stats{background:#ebf0d9;border:1.5px solid var(--ink);border-radius:0;box-shadow:8px 8px 0 var(--ink)}
-.stats article{border-right:1px solid #bac5ad}
-.stats strong{font-weight:800;color:var(--accent);font-size:52px}
-.stats span{color:#37453e}
-.section{padding:125px 0}
-.sectionHead{max-width:840px}
-.sectionHead h2{position:relative}
-.awardGrid{gap:19px;grid-template-columns:1.14fr 1fr 1fr}
-.awardGrid article{border:1.5px solid var(--ink);border-radius:4px;box-shadow:6px 6px 0 #d7d3c8;background:#fffefa;transition:transform .25s,box-shadow .25s}
-.awardGrid article:nth-child(2){background:#e8efff}.awardGrid article:nth-child(3){background:#eaf3da}
-.awardGrid article:hover{transform:translate(-4px,-5px);box-shadow:10px 11px 0 #bec9e5}
-.awardTop b{background:#e8f68f;color:#253022;border:1px solid var(--ink);padding:5px 12px;border-radius:100px}
-.awardGrid h3{margin-top:86px}
-.timeline{border-top:2px solid var(--ink)}
-.timeline article{padding:31px 18px;transition:background .2s;grid-template-columns:165px 1fr}
-.timeline article:hover{background:#eceddc}
-.timeline article>span{color:var(--accent);font-size:13px}
-.timeline article h3:before{content:"↗ ";color:var(--accent)}
-.volunteer{border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
-.volunteerList article{transition:background .2s;padding-left:12px;padding-right:12px}
-.volunteerList article:hover{background:#e8efd8}
-.languageVisual{background:#2444aa;border-radius:3px;box-shadow:12px 12px 0 #d4ddf7;position:relative;overflow:hidden}
-.languageVisual:after{content:"✳";position:absolute;right:-22px;top:-85px;color:rgba(255,255,255,.13);font-size:380px;line-height:1}
-.languageMark{font-size:138px;color:#d5ff7f}
-.miniTags span{border:1.5px solid var(--ink);border-radius:40px;color:var(--ink);background:#f4f0e6;padding:10px 15px}
-.goalGrid{border-top:2px solid var(--ink)}
-.goalGrid article{padding-top:42px}
-.goalGrid span{display:inline-flex;width:43px;height:43px;align-items:center;justify-content:center;border:1px solid var(--ink);border-radius:50%;background:#e9f4b2;color:var(--ink)}
-.goalGrid h3{margin-top:25px}
-.closing{background:#23372e;position:relative;overflow:hidden}
-.closing:after{content:"✳";position:absolute;right:-60px;top:-90px;font-size:350px;line-height:1;color:rgba(227,252,151,.10);pointer-events:none}
-.closing>p{color:#d4e8ac}
-.closing span{color:#e1e8dd}
-.page footer{padding:28px 0 30px}
-@media(max-width:900px){.hero{grid-template-columns:1fr;gap:10px;min-height:auto}.heroPanel{height:505px}.hero h1{font-size:clamp(76px,16vw,120px)}.awardGrid{grid-template-columns:1fr}.heroCopy:before{margin-bottom:20px}.intro{padding:90px 0}}
-@media(max-width:560px){.header{height:74px}.header nav{gap:16px;font-size:12px}.hero{padding:55px 0 75px}.hero h1{font-size:76px}.heroLine{font-size:26px}.heroPanel{height:430px}.heroCard{width:76%;height:157px;padding:19px}.heroCard strong{font-size:29px}.heroCardA{transform:translate(-26px,-102px) rotate(-7deg)}.heroCardB{transform:translate(30px,0) rotate(5deg)}.heroCardC{transform:translate(-12px,107px) rotate(-4deg)}.heroPanel:after{width:82px;height:82px;font-size:10px;bottom:0}.hero h1:after{font-size:24px;top:-10px}.intro h2,.sectionHead h2,.volunteer h2,.language h2,.closing h2{font-size:clamp(38px,10vw,54px)}.stats strong{font-size:42px}.timeline article{grid-template-columns:90px 1fr;gap:12px}.languageVisual{min-height:340px}.languageMark{font-size:92px}.closing:after{font-size:230px}}
-@media(prefers-reduced-motion:reduce){.primary,.secondary,.awardGrid article{transition:none}}
+.header{height:84px;background:rgba(250,245,237,.91);border-bottom:1px solid #ded0c0;backdrop-filter:blur(18px)}
+.brand{font-family:"DM Sans","Noto Sans KR",sans-serif;color:#3a4a38;letter-spacing:.08em;font-weight:800}
+.brand .dot{background:#dca889;border:2px solid #9f6b55;border-radius:50%;width:12px;height:12px}
+.header nav{color:#51493f;font-weight:600;gap:30px}
+.header nav a:after{background:#b78a73}
+.header nav a:hover{color:#8a6150}
+.eyebrow{color:#9b725e;font-size:12px;letter-spacing:.16em}
+.hero{min-height:750px;grid-template-columns:1.05fr .95fr;gap:5vw;padding:100px 0 130px}
+.heroCopy{position:relative}
+.heroCopy:before{content:"A WARM GROWTH JOURNAL  ✳";display:inline-block;font:700 11px "DM Sans",sans-serif;letter-spacing:.11em;border:1px solid #bca58c;border-radius:100px;padding:11px 18px;background:#f9dfca;transform:rotate(-2deg);margin-bottom:32px;color:#815e4b}
+.hero h1{font-family:"Gowun Dodum","Noto Sans KR",sans-serif;font-size:clamp(82px,8vw,126px);font-weight:700;line-height:1.1;letter-spacing:-.075em;color:#3e4c3a}
+.hero h1:after{content:"✿";color:#dca589;font-size:40px;vertical-align:top;margin-left:12px}
+.heroLine{font-size:clamp(25px,2.3vw,36px);font-weight:700;line-height:1.45;color:#443e37;letter-spacing:-.055em}
+.lead{color:#645e55;font-size:16px;max-width:580px;line-height:1.95}
+.actions{gap:13px;flex-wrap:wrap}
+.primary,.secondary{display:inline-block;border-radius:100px;padding:15px 24px;font-size:13px;font-weight:700;transition:transform .2s,background .2s,box-shadow .2s}
+.primary{background:#73896d;color:#fff;border:1px solid #73896d}
+.secondary{background:#fff8ef;color:#6b584c;border:1px solid #d3bba8}
+.primary:hover,.secondary:hover{transform:translateY(-3px);box-shadow:0 9px 20px rgba(95,70,48,.13)}
+.secondary:hover{background:#f3dcc9;border-color:#caad92;color:#513d33}
+.heroPanel{height:540px;position:relative}
+.heroPanel:before{content:"LITTLE MOMENTS, BIG GROWTH";position:absolute;left:6%;top:2%;font:700 11px "DM Sans",sans-serif;color:#8c7964;letter-spacing:.13em}
+.heroPanel:after{content:"with people ♡";position:absolute;right:1%;bottom:5%;width:128px;height:128px;background:#f5c9b5;border:1px solid #daa994;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:rotate(13deg);font:700 17px "Gowun Dodum",sans-serif;color:#78503f;box-shadow:0 8px 22px #8b665029}
+.heroCard{border:1px solid #decbbb;border-radius:22px;width:min(380px,83%);height:190px;background:#fff9f0;box-shadow:0 20px 45px rgba(105,82,61,.11);padding:27px}
+.heroCard span{color:#a57761}.heroCard strong{font-size:34px;color:#3c4838}.heroCard p{color:#7b7167}
+.heroCardA{background:#f9e9d9;transform:translate(-46px,-124px) rotate(-6deg)}
+.heroCardB{background:#e4eddf;transform:translate(54px,1px) rotate(5deg)}
+.heroCardC{background:#f5e3e1;transform:translate(-25px,140px) rotate(-3deg)}
+.intro{border-top:1px solid #ab9d8e;padding:125px 0}
+.intro h2,.sectionHead h2,.volunteer h2,.language h2,.closing h2{font-family:"Gowun Dodum","Noto Sans KR",sans-serif;line-height:1.23;letter-spacing:-.058em}
+.introText p{color:#62594f;line-height:2}
+.stats{background:#e2eadb;border:1px solid #c3d1bb;border-radius:24px;overflow:hidden;box-shadow:0 16px 36px #6b84611c}
+.stats article{border-color:#c2ceb8;padding:34px 24px}
+.stats strong{color:#577450}.stats span{color:#576352}
+.section{padding:126px 0}
+.sectionHead>p:last-child{color:#756d64}
+.awardGrid{gap:20px}
+.awardGrid article{background:#fff9f1;border:1px solid #e4d5c7;border-radius:28px;box-shadow:0 14px 34px rgba(96,77,56,.07);transition:transform .25s,box-shadow .25s}
+.awardGrid article:nth-child(2){background:#e7eee4}.awardGrid article:nth-child(3){background:#f6e5dd}
+.awardGrid article:hover{transform:translateY(-7px);box-shadow:0 25px 42px #65513d21}
+.awardTop b{background:#eed1c0;color:#865d4c;border:none;border-radius:100px;padding:5px 12px}
+.awardGrid h3{color:#3a4437}
+.timeline{border-top:1px solid #a99883}
+.timeline article{border-bottom-color:#d7cab8;transition:background .2s,padding .2s;border-radius:16px}
+.timeline article:hover{background:#faf5ec;padding-left:20px}
+.timeline article>span{color:#987361}
+.timeline h3{color:#3b493a}
+.timeline h3:before{content:"✿ ";font-size:18px;color:#d89f83}
+.volunteer{border-top:1px solid #b8a693;border-bottom:1px solid #b8a693}
+.volunteerList article{padding-left:10px;padding-right:10px;border-radius:12px}
+.volunteerList article:hover{background:#e5ebdc}
+.volunteerList span{color:#9a765e}
+.languageVisual{background:linear-gradient(150deg,#778d78,#405e58);border-radius:32px;box-shadow:0 25px 45px #4e6a5326;overflow:hidden;position:relative}
+.languageVisual:after{content:"✿";position:absolute;font-size:280px;right:-35px;top:-65px;color:#ffffff1b;line-height:1}
+.languageMark{color:#f9e4c9;font-family:"Gowun Dodum",sans-serif}
+.languageVisual span{color:#ffe6ca}
+.languageVisual p{color:#ebf1e9}
+.miniTags span{border-radius:100px;border:1px solid #dfc9b6;background:#fff9f0;color:#705b4d;padding:9px 13px}
+.goalGrid{border-top-color:#a99883}
+.goalGrid article{border-color:#d7c9b8}
+.goalGrid span{background:#e0e9db;display:inline-flex;border-radius:50%;align-items:center;justify-content:center;width:40px;height:40px;color:#587151}
+.goalGrid h3{color:#3c4a3b}
+.closing{background:#52684f;color:#fff9f0;position:relative;overflow:hidden}
+.closing:after{content:"✿";position:absolute;right:-55px;top:-95px;font-size:380px;line-height:1;color:#ffffff12;pointer-events:none}
+.closing>p{color:#f2d3bc}
+.closing span{color:#e8ecdf}
+.page footer{padding:30px 0;color:#6d6459}
+@media(max-width:900px){.hero{grid-template-columns:1fr;min-height:auto;gap:15px;padding:70px 0 100px}.heroPanel{height:500px}.hero h1{font-size:clamp(70px,16vw,112px)}.awardGrid{grid-template-columns:1fr}.intro{padding:95px 0}}
+@media(max-width:560px){.header{height:72px}.header nav{gap:14px;font-size:12px}.hero{padding:60px 0 80px}.heroCopy:before{margin-bottom:20px}.hero h1{font-size:clamp(62px,17vw,82px)}.hero h1:after{font-size:25px}.heroLine{font-size:27px}.heroPanel{height:430px}.heroCard{width:80%;height:160px;padding:20px}.heroCard strong{font-size:28px}.heroCardA{transform:translate(-23px,-108px) rotate(-5deg)}.heroCardB{transform:translate(25px,0) rotate(5deg)}.heroCardC{transform:translate(-14px,110px) rotate(-3deg)}.heroPanel:after{width:86px;height:86px;font-size:12px;bottom:1%}.intro h2,.sectionHead h2,.volunteer h2,.language h2,.closing h2{font-size:clamp(37px,9vw,54px)}.stats strong{font-size:42px}.timeline article{grid-template-columns:85px 1fr;gap:15px}.languageVisual{min-height:350px}.languageMark{font-size:92px}.closing:after{font-size:250px}}
+@media(prefers-reduced-motion:reduce){.primary,.secondary,.awardGrid article,.timeline article{transition:none}}
