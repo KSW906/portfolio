@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#F6F3EE"/>
+<rect x="65" y="65" width="1070" height="630" rx="28" fill="#FFFFFF" stroke="#DDD8D0"/>
+<rect x="95" y="100" width="1010" height="70" rx="18" fill="#154A4F"/>
+<text x="130" y="145" font-family="Arial" font-size="28" font-weight="700" fill="#FFFFFF">PetMart · AI WEB PROJECT</text>
+<rect x="110" y="205" width="350" height="410" rx="24" fill="#E8F0EC"/>
+<circle cx="285" cy="350" r="110" fill="#EFC486"/>
+<circle cx="245" cy="330" r="18" fill="#253132"/>
+<circle cx="325" cy="330" r="18" fill="#253132"/>
+<path d="M245 405 Q285 435 325 405" fill="none" stroke="#253132" stroke-width="8" stroke-linecap="round"/>
+<rect x="500" y="205" width="575" height="180" rx="24" fill="#F6F3EE"/>
+<rect x="500" y="410" width="275" height="205" rx="24" fill="#154A4F"/>
+<rect x="800" y="410" width="275" height="205" rx="24" fill="#EFC486"/>
+<text x="535" y="270" font-family="Arial" font-size="24" font-weight="700" fill="#154A4F">LOGIN · WISHLIST · CART · PAYMENT</text>
+<text x="535" y="330" font-family="Arial" font-size="42" font-weight="700" fill="#253132">USER FLOW</text>
+<text x="535" y="500" font-family="Arial" font-size="26" font-weight="700" fill="#FFFFFF">AI ASSISTED</text>
+<text x="535" y="545" font-family="Arial" font-size="26" font-weight="700" fill="#FFFFFF">BUILD</text>
+<text x="835" y="500" font-family="Arial" font-size="26" font-weight="700" fill="#154A4F">UI / UX</text>
+<text x="835" y="545" font-family="Arial" font-size="26" font-weight="700" fill="#154A4F">THINKING</text>
+</svg>
