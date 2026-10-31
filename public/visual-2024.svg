@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<rect width="1200" height="760" fill="#F6F3EE"/>
+<rect x="72" y="70" width="1056" height="620" rx="34" fill="#154A4F"/>
+<rect x="120" y="120" width="420" height="520" rx="20" fill="#FCFBF8"/>
+<rect x="580" y="120" width="500" height="245" rx="20" fill="#EFC486"/>
+<rect x="580" y="395" width="500" height="245" rx="20" fill="#FFFFFF"/>
+<text x="155" y="185" font-family="Arial" font-size="30" font-weight="700" fill="#154A4F">2024 · SMILEAGE</text>
+<text x="155" y="250" font-family="Arial" font-size="62" font-weight="700" fill="#253132">LEARN</text>
+<text x="155" y="315" font-family="Arial" font-size="62" font-weight="700" fill="#253132">RECORD</text>
+<text x="155" y="380" font-family="Arial" font-size="62" font-weight="700" fill="#7F9B91">GROW</text>
+<line x1="155" y1="430" x2="470" y2="430" stroke="#D7D0C7" stroke-width="2"/>
+<text x="155" y="475" font-family="Arial" font-size="20" fill="#717A78">Language portfolio · Award</text>
+<circle cx="645" cy="190" r="32" fill="#154A4F"/>
+<text x="705" y="200" font-family="Arial" font-size="34" font-weight="700" fill="#154A4F">AWARD</text>
+<text x="625" y="305" font-family="Arial" font-size="82" font-weight="700" fill="#154A4F">大賞</text>
+<text x="625" y="455" font-family="Arial" font-size="26" font-weight="700" fill="#253132">MENTORING STARTS HERE</text>
+<text x="625" y="505" font-family="Arial" font-size="20" fill="#717A78">Study group · tutoring · reflection</text>
+<path d="M625 570 C760 500 895 620 1030 545" fill="none" stroke="#154A4F" stroke-width="8" stroke-linecap="round"/>
+</svg>
