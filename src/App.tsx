@@ -6,8 +6,10 @@ const years = [
     title: "경험의 폭을 넓히며, 나를 이해하기 시작했습니다.",
     summary: "경영학의 기초를 배우고 외국어·교육·멘토링 활동을 경험하면서 내가 어떤 방식으로 배우고, 어떤 순간에 가장 몰입하는지를 발견한 시기입니다.",
     note: "기록과 실행을 통해 ‘성장하는 사람’의 방식을 배운 해",
+    transition: "기록하는 경험은 곧, 다른 사람의 성장을 바라보는 시선으로 이어졌습니다.",
+    visual: "/visual-2024.svg",
     items: [
-      { type:"AWARD", title:"제2회 SMILEAGE 외국어 포트폴리오 경진대회", meta:"대상", desc:"1년간의 외국어 학습을 목표·과정·성과·성찰로 구조화해 포트폴리오로 완성했습니다.", featured:true },
+      { type:"AWARD", title:"제2회 SMILEAGE 외국어 포트폴리오 경진대회", meta:"대상", desc:"1년간의 외국어 학습을 목표·과정·성과·성찰로 구조화해 포트폴리오로 완성했습니다.", featured:true, visual:"/visual-2024.svg" },
       { type:"AWARD", title:"도전장학 스토리캐스팅", meta:"최우수상", desc:"대학생활 4개년 목표와 실천계획을 세우고 실제 달성 과정을 점검했습니다." },
       { type:"AWARD", title:"학습법 관련 우수사례 공모전", meta:"장려상", desc:"전공과 외국어 학습에서 직접 활용한 학습법과 성과를 사례로 정리했습니다." },
       { type:"MENTORING", title:"선문학습공동체 디딤돌그룹", meta:"리더·튜터 · 우수팀", desc:"약 10주간 토익 학습계획과 자료를 만들고 팀원의 어려움에 맞춰 학습 방식을 조정했습니다.", featured:true },
@@ -27,8 +29,10 @@ const years = [
     title: "사람과 조직을 보는 관점이 생겼습니다.",
     summary: "조직행동론을 통해 사람의 행동과 동기를 이론적으로 바라보기 시작했고, 1학년 때 쌓은 경험을 후배에게 나누는 멘토 역할로 확장했습니다.",
     note: "나의 경험이 다른 사람의 성장 지원으로 이어진 해",
+    transition: "사람을 돕는 경험이 쌓이면서, 관심은 자연스럽게 조직과 성장으로 향했습니다.",
+    visual: "/visual-2025.svg",
     items: [
-      { type:"HRD", title:"SMILEAGE 외국어 포트폴리오 멘토링 시작", meta:"2025.1학기~", desc:"후배들의 외국어 활동과 목표를 듣고 포트폴리오 방향과 학습 계획을 함께 정리하는 멘토 역할을 시작했습니다.", featured:true },
+      { type:"HRD", title:"SMILEAGE 외국어 포트폴리오 멘토링 시작", meta:"2025.1학기~", desc:"후배들의 외국어 활동과 목표를 듣고 포트폴리오 방향과 학습 계획을 함께 정리하는 멘토 역할을 시작했습니다.", featured:true, visual:"/visual-2025.svg" },
       { type:"MAJOR", title:"조직행동론 · 트럼프 관세정책", meta:"팀 프로젝트 · PPT 제작", desc:"감정지능·거래적 리더십·권력 개념을 실제 정치·경제 사례에 적용해 분석했습니다.", featured:true },
       { type:"AWARD", title:"도전! 선문 독서왕 서평쓰기 대회", meta:"장려상", desc:"『돈으로 살 수 없는 것들』을 자기결정이론, 조직관리, 윤리경영 관점과 연결해 해석했습니다." },
       { type:"LIBERAL", title:"생활예절과 문화", meta:"3편의 에세이", desc:"세대갈등, 명절문화, 생활예절을 통해 타인 존중과 관계 속 소통의 의미를 탐색했습니다." },
@@ -42,11 +46,13 @@ const years = [
     title: "HRD·인사라는 방향을 구체적으로 선택했습니다.",
     summary: "장기 멘토링, 글로벌 경험, 디지털 프로젝트를 통해 사람의 성장과 조직의 목표를 연결하는 일을 나의 진로로 구체화하고 있습니다.",
     note: "경험을 HR 역량과 진로 언어로 다시 정의한 해",
+    transition: "이제는 경험을 나열하는 단계를 넘어, 내가 어떤 HR이 되고 싶은지 설명할 수 있게 되었습니다.",
+    visual: "/visual-canada.svg",
     items: [
       { type:"PORTFOLIO", title:"HUMAN LINK 외국어 포트폴리오", meta:"1차 합격", desc:"ME→YOU→WORLD→WORK→NEXT 흐름으로 3년간의 외국어 경험을 HRD 진로와 연결했습니다.", featured:true },
-      { type:"HRD", title:"SMILEAGE 장기 멘토링", meta:"2026.2학기 현재까지", desc:"학생별 작성 동기·경험·목표를 파악하고 프로그램 추천, 학년별 계획, 스토리 구성, 재점검까지 맞춤형 컨설팅을 이어가고 있습니다.", featured:true },
-      { type:"GLOBAL", title:"선문글로벌 FLY TRACK 1 · 캐나다", meta:"3주 · Calgary", desc:"수업·발표·다국적 교류를 통해 영어를 시험 과목이 아닌 관계와 문화를 이해하는 도구로 확장했습니다.", featured:true },
-      { type:"DIGITAL", title:"AI를 활용한 PetMart 웹 서비스", meta:"AI·웹 프로젝트", desc:"상품 탐색, 로그인·회원가입, 찜, 장바구니, 결제 흐름을 구현하고 AI를 코드 작성·오류 분석·문제 해결에 활용했습니다." },
+      { type:"HRD", title:"SMILEAGE 장기 멘토링", meta:"2026.2학기 현재까지", desc:"학생별 작성 동기·경험·목표를 파악하고 프로그램 추천, 학년별 계획, 스토리 구성, 재점검까지 맞춤형 컨설팅을 이어가고 있습니다.", featured:true, visual:"/visual-2025.svg" },
+      { type:"GLOBAL", title:"선문글로벌 FLY TRACK 1 · 캐나다", meta:"3주 · Calgary", desc:"수업·발표·다국적 교류를 통해 영어를 시험 과목이 아닌 관계와 문화를 이해하는 도구로 확장했습니다.", featured:true, visual:"/visual-canada.svg" },
+      { type:"DIGITAL", title:"AI를 활용한 PetMart 웹 서비스", meta:"AI·웹 프로젝트", desc:"상품 탐색, 로그인·회원가입, 찜, 장바구니, 결제 흐름을 구현하고 AI를 코드 작성·오류 분석·문제 해결에 활용했습니다.", visual:"/visual-petmart.svg" },
       { type:"ESG", title:"ESG 팀 공모 프로젝트 ‘이음(I-Eum)’", meta:"팀장 · 7월까지 참여", desc:"어린이 창업 체험 교실을 기획하고 수업안·QR 보드게임·현장 연계를 준비했습니다. 운영의 어려움을 경험한 뒤 활동을 중도 종료했습니다." }
     ]
   }
@@ -166,40 +172,56 @@ export default function App(){
         </div>
 
         {years.map((year, yi)=>(
-          <section className="yearSection" key={year.year}>
-            <aside className="yearSticky">
-              <span>{String(yi+1).padStart(2,"0")}</span>
-              <strong>{year.year}</strong>
-              <small>{year.grade}</small>
-              <b>{year.label}</b>
-            </aside>
+          <div key={year.year}>
+            <section className="yearSection">
+              <aside className="yearSticky">
+                <span>{String(yi+1).padStart(2,"0")}</span>
+                <strong>{year.year}</strong>
+                <small>{year.grade}</small>
+                <b>{year.label}</b>
+              </aside>
 
-            <div className="yearMain">
-              <div className="yearLead">
-                <h3>{year.title}</h3>
-                <div>
-                  <p>{year.summary}</p>
-                  <span>{year.note}</span>
+              <div className="yearMain">
+                <div className="yearLead">
+                  <div>
+                    <h3>{year.title}</h3>
+                    <p className="yearNote">{year.note}</p>
+                  </div>
+                  <div className="yearVisual">
+                    <img src={year.visual} alt={year.year + " chapter visual"} />
+                  </div>
+                </div>
+
+                <p className="yearSummary">{year.summary}</p>
+
+                <div className="yearItems">
+                  {year.items.map((item)=>(
+                    <article className={item.featured ? "workCard featured" : "workCard"} key={item.title}>
+                      <div className="workPreview">
+                        <span>{item.type}</span>
+                        <b>{item.meta}</b>
+                        <div className={item.visual ? "mediaSlot image" : "mediaSlot"}>
+                          {item.visual ? <img src={item.visual} alt="" /> : <span>자료 이미지 영역</span>}
+                        </div>
+                      </div>
+                      <div className="workText">
+                        <h4>{item.title}</h4>
+                        <p>{item.desc}</p>
+                      </div>
+                    </article>
+                  ))}
                 </div>
               </div>
+            </section>
 
-              <div className="yearItems">
-                {year.items.map((item)=>(
-                  <article className={item.featured ? "workCard featured" : "workCard"} key={item.title}>
-                    <div className="workPreview">
-                      <span>{item.type}</span>
-                      <b>{item.meta}</b>
-                      <div className="mediaSlot">자료 이미지 추가 예정</div>
-                    </div>
-                    <div className="workText">
-                      <h4>{item.title}</h4>
-                      <p>{item.desc}</p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
+            {yi < years.length-1 && (
+              <section className="chapterBridge">
+                <span>{year.year}</span>
+                <p>{year.transition}</p>
+                <b>→ {years[yi+1].year}</b>
+              </section>
+            )}
+          </div>
         ))}
       </section>
 
