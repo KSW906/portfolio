@@ -4,10 +4,56 @@ import { details } from "./details";
 const d = (i: number) => ({ "--i": i } as CSSProperties);
 
 const metrics = [
+  ["4.33", "/ 4.5", "전체 평점평균", "석차 2 / 82 · 수석 장학 3학기"],
   ["6", "회", "교내 공모전 수상", "대상 · 최우수상 포함"],
-  ["7", "개월", "중학생 영어 멘토링", "늘벗 공부방"],
-  ["10", "주", "스터디 리더·튜터", "디딤돌그룹 우수팀"],
-  ["3", "주", "캐나다 캘거리 연수", "FLY TRACK 1"]
+  ["5", "번", "팀장·조장 (2026년)", "경진대회 · 일경험 · YLC"],
+  ["2", "년째", "지역아동센터 교육멘토", "2025.3 ~ 현재"]
+];
+
+/* 한눈에 보기: 각 줄은 자세한 섹션으로 연결 */
+const glance: { label: string; head: string; text: string; href: string; go: string }[] = [
+  {
+    label: "이런 사람입니다",
+    head: "공감하고, 끝까지 확인합니다",
+    text: "다시 확인하는 사람 · 먼저 다가가는 사람 · 직접 해 보는 사람. 보완할 점은 부탁을 쉽게 거절하지 못하는 것이라, 지금은 역할 분담부터 정합니다.",
+    href: "#about",
+    go: "성격과 가치관"
+  },
+  {
+    label: "왜 인사·HRD인가",
+    head: "아이들의 변화에서 보람을 찾았습니다",
+    text: "학습을 거부하던 아이가 1년 만에 나눗셈을 스스로 풀게 된 경험이, 신입사원의 적응과 성장을 돕고 싶다는 목표로 이어졌습니다.",
+    href: "#about",
+    go: "대표 이야기"
+  },
+  {
+    label: "대표 경험",
+    head: "팀을 이끌고 결과를 냈습니다",
+    text: "사회적기업 경진대회 본선 진출 팀 ‘그린 하우스’ 팀장, 고용노동부 미래내일 일경험 5조 팀장, SMILEAGE 장기 멘토 (2026년 후배 14명 상담).",
+    href: "#project",
+    go: "프로젝트와 경험"
+  },
+  {
+    label: "학업",
+    head: "4.33 / 4.5 · 전체 석차 2 / 82",
+    text: "2학년 두 학기 연속 만점, 수석 성적장학금 3학기 연속. 조직행동론·조직이론·심리학으로 사람과 조직을 공부했습니다.",
+    href: "#study",
+    go: "성적과 수강 과목"
+  },
+  {
+    label: "수상 · 어학",
+    head: "교내 공모전 6회 수상",
+    text: "SMILEAGE 외국어 포트폴리오 대상(2024)과 동상(2026), CLEVER:ON 장려상(혁신원장상) 등. TOEIC 675점 (2025.11).",
+    href: "#awards",
+    go: "수상과 장학"
+  },
+  {
+    label: "다음 목표",
+    head: "신입 육성 전문가로 성장합니다",
+    text: "졸업 전 TOEIC 850점과 HRD 인턴 지원, 첫 직장에서는 맡기면 안심되는 동료, 40대에는 믿고 의논할 수 있는 HRD 전문가가 목표입니다.",
+    href: "#roadmap",
+    go: "커리어 로드맵"
+  }
 ];
 
 /* HR 담당자 역량과 근거 경험 */
@@ -99,7 +145,7 @@ const cases: Case[] = [
     period: "2025 ~ 2026.2학기",
     situation: "외국어 포트폴리오를 준비하는 학생들이 활동을 하나의 이야기로 엮는 데 어려움을 겪었습니다.",
     action: "학생의 경험과 목표를 먼저 듣고, 활동 간 연결·성찰·향후 계획을 함께 정리했습니다.",
-    result: "대상 수상 경험을 후배의 성장 지원으로 확장",
+    result: "2026년 한 해 후배 14명 상담 · 대상 수상 경험을 후배의 성장 지원으로 확장",
     link: "경력 개발 면담과 성장 계획 수립에 그대로 이어지는 경험입니다."
   },
   {
@@ -183,7 +229,7 @@ const years = [
     step: "2학년 · 연결",
     head: "다른 사람의 성장을 돕기 시작한 해",
     text: "조직행동론으로 사람의 행동과 동기를 배우고, SMILEAGE 멘토로 실제 누군가의 성장 과정을 함께 설계했습니다.",
-    extra: ["SMILEAGE 멘토 시작", "조직행동론 팀 프로젝트", "독서왕 서평쓰기 장려상"]
+    extra: ["지역아동센터 교육멘토 시작 (3월~)", "SMILEAGE 멘토 시작", "조직행동론 팀 프로젝트", "독서왕 서평쓰기 장려상"]
   },
   {
     y: "2026",
@@ -218,7 +264,7 @@ const ylc = [
     when: "2026.9 – 10",
     id: "marketing",
     name: "48대 SKILL-UP 마케팅대회",
-    team: "10조 · 4인",
+    team: "10조 · 4인 · 중간에 팀장을 맡음",
     topic: "삼양식품 진단과 ‘BULDAK KIT’ 신제품 제안",
     mine: "삼양식품 기업·브랜드 분석 보고서를 단독으로 작성해 1차 기업진단의 기초 자료로 제공",
     hr: "자료 기반 진단"
@@ -236,7 +282,7 @@ const ylc = [
     when: "2026.10 – 11",
     id: "shipbuilding",
     name: "3·4차 Y.E.S 조선산업 분석",
-    team: "충청전라지부 ‘항해일지조’ · 6인",
+    team: "충청전라지부 ‘항해일지조’ · 6인 · 조장",
     topic: "삼성중공업 중심 조선업 분석 (PEST · 5 Forces · 전략 제언)",
     mine: "6명이 파트를 나눠 조사한 내용을 51쪽 통합 보고서로 묶고, 산업분석 경쟁 PT와 산업박람회 PT로 발표",
     hr: "다인원 협업"
@@ -425,6 +471,8 @@ export default function App() {
       <nav className="nav" aria-label="주요 메뉴">
         <a href="#top" className="navName">김희연</a>
         <div className="navLinks">
+          <a href="#glance">한눈에</a>
+          <a href="#about">소개</a>
           <a href="#skills">역량</a>
           <a href="#project">프로젝트</a>
           <a href="#cases">경험</a>
@@ -438,19 +486,19 @@ export default function App() {
       <main id="top">
         <section className="hero">
           <div className="heroCopy">
-            <p className="tag reveal">선문대학교 경영학과 · HR 인사담당 지망</p>
+            <p className="tag reveal">선문대학교 경영학과 3학년 · 인사·HRD 지망</p>
             <h1 className="reveal" style={d(1)}>
-              사람이 성장하는 조직을 만드는 <em>인사담당자</em>가 되겠습니다.
+              배움의 시작을 돕는 <em>HRD 담당자</em>를 꿈꾸는 김희연입니다.
             </h1>
             <p className="lead reveal" style={d(2)}>
-              멘토링과 스터디 리더로 다른 사람의 성장을 도우며, 사람을 이해하고 돕는 일이 제 길이라는 것을
-              알게 되었습니다. HR에 필요한 역량을 3년 동안 어떻게 쌓아 왔는지 정리했습니다.
+              지역아동센터에서 아이들을 가르치고, 후배를 상담하고, 여러 팀을 이끌며 사람이 새 환경에 적응하고
+              성장하도록 돕는 일이 제 길이라는 것을 알게 되었습니다. 그 일을 회사에서 이어가고 싶습니다.
             </p>
             <div className="actions reveal" style={d(3)}>
-              <a href="#skills" className="btn">
-                HR 역량 보기 <span className="btnIcon"><Arrow /></span>
+              <a href="#glance" className="btn">
+                한눈에 보기 <span className="btnIcon"><Arrow /></span>
               </a>
-              <a href="#cases" className="btn ghost">핵심 경험</a>
+              <a href="#project" className="btn ghost">대표 프로젝트</a>
             </div>
           </div>
 
@@ -465,13 +513,14 @@ export default function App() {
               </div>
               <dl>
                 <div><dt>소속</dt><dd>선문대학교 경영학과 3학년</dd></div>
-                <div><dt>희망 직무</dt><dd>HR 인사담당 · 인재 육성(HRD)</dd></div>
-                <div><dt>강점</dt><dd>경청 · 성장 설계 · 기록</dd></div>
-                <div><dt>활동 기간</dt><dd className="num">2024 – 2026</dd></div>
+                <div><dt>희망 직무</dt><dd>인사 · 인재 육성(HRD)</dd></div>
+                <div><dt>성격 강점</dt><dd>공감 · 꼼꼼함 · 실행력</dd></div>
+                <div><dt>성적</dt><dd><span className="num">4.33 / 4.5</span> · 석차 <span className="num">2 / 82</span></dd></div>
+                <div><dt>어학</dt><dd>TOEIC <span className="num">675</span> (2025.11)</dd></div>
               </dl>
               <p className="now">
                 <span className="dot" aria-hidden="true" />
-                지금은 SMILEAGE 장기 멘토로 활동하고 있습니다.
+                지금은 지역아동센터 교육멘토와 SMILEAGE 장기 멘토로 활동하고 있습니다.
               </p>
             </div>
           </aside>
@@ -485,6 +534,131 @@ export default function App() {
               <span>{sub}</span>
             </div>
           ))}
+        </section>
+
+        {/* 한눈에 보기: 교수님이 1분 안에 읽는 요약 */}
+        <section className="glance" id="glance">
+          <div className="glanceHead reveal">
+            <p className="secLabel">한눈에 보기</p>
+            <h2>김희연을 한 장으로</h2>
+            <p>성격, 진로를 정한 이유, 대표 경험, 학업, 수상, 목표를 한 줄씩 정리했습니다. 줄마다 자세한 내용으로 이동합니다.</p>
+          </div>
+          <ol className="glanceList">
+            {glance.map((g, i) => (
+              <li key={g.label} className="reveal" style={d(i)}>
+                <a href={g.href}>
+                  <span className="glanceLabel"><span className="num">{String(i + 1).padStart(2, "0")}</span>{g.label}</span>
+                  <span className="glanceBody">
+                    <strong>{g.head}</strong>
+                    <span>{g.text}</span>
+                  </span>
+                  <span className="glanceGo">{g.go} <span className="moreIcon"><Arrow /></span></span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        {/* 소개: 저는 이런 사람입니다 */}
+        <section className="about" id="about">
+          <div className="aboutLead reveal">
+            <p className="secLabel">저는 이런 사람입니다</p>
+            <h2>아이들을 가르치며 찾은 방향</h2>
+            <p>
+              아이들에게 영어와 수학을 가르치며, 같은 내용도 사람마다 다르게 설명해야 한다는 것을 배웠습니다.
+              아이가 달라지는 모습을 보며 느낀 보람을, 이제는 낯선 조직에 들어온 신입사원이 적응하고 성장하도록
+              돕는 일로 이어가고 싶습니다.
+            </p>
+          </div>
+
+          <article className="story reveal">
+            <div className="storyHead">
+              <p className="kind">하이터치 역량 · 공감과 설득</p>
+              <h3>“어차피 못해요”라던 아이가 나눗셈을 풀기까지</h3>
+              <small>지역아동센터 교육멘토 · 교외근로 장학생 · 2025.3 ~ 현재</small>
+            </div>
+            <ol className="storySteps">
+              <li><strong>상황</strong><p>곱셈과 나눗셈을 전혀 하지 못하고 학습을 거부하던 경계선 지능 아이의 전담 지도를 맡았습니다.</p></li>
+              <li><strong>행동</strong><p>약 1년 동안 경계선 지능의 특성과 지도법을 찾아 공부했습니다. 좋아하는 주제로 대화를 먼저 나누고, 시각 자료와 교구로 아이의 속도에 맞췄습니다. “이 세 문제만 풀어 보자”처럼 작은 목표를 주고, 결과보다 노력한 과정을 칭찬했습니다.</p></li>
+              <li><strong>변화</strong><p>1년 뒤 아이는 나눗셈까지 스스로 풀었고, 어려운 문제가 나오면 포기하지 않고 도움을 요청하게 되었습니다.</p></li>
+            </ol>
+            <p className="storyNote">진도를 끝내는 것보다 이해했는지 확인하는 것이 교육이라는 걸 배웠습니다. 교육받은 내용을 현장에서 쓸 수 있게 돕는 HRD 담당자가 되고 싶은 이유입니다.</p>
+          </article>
+
+          <div className="traits">
+            {[
+              ["다시 확인하는 사람", "이해가 안 되거나 틀린 부분은 그냥 넘기지 않습니다. 시험은 3주 전부터 준비하고, 헷갈린 개념은 관련 문제까지 다시 풉니다. 팀 발표자료도 내용과 글자 크기, 자료의 정확성까지 살핍니다."],
+              ["먼저 다가가는 사람", "대학 입학 전에는 내향적이었습니다. 기다리기만 하면 만날 기회도 줄어든다고 생각해, 신입생 OT와 비바체 오케스트라 동아리에서 먼저 인사를 건넸습니다. 지금은 상대가 지나가듯 한 말도 기억하려고 합니다."],
+              ["직접 해 보는 사람", "관심이 생기면 먼저 신청해 봅니다. 코딩을 몰랐지만 AI와 함께 PetMart를 만들었고, 기대와 달랐던 프롬프트 강의는 그만두는 대신 다른 방법을 찾아 계속 공부했습니다."]
+            ].map(([t, x], i) => (
+              <article className="trait reveal" key={t} style={d(i)}>
+                <span className="num">{String(i + 1).padStart(2, "0")}</span>
+                <h3>{t}</h3>
+                <p>{x}</p>
+              </article>
+            ))}
+            <article className="trait weak reveal" style={d(3)}>
+              <span className="num">보완 중</span>
+              <h3>부탁을 쉽게 거절하지 못합니다</h3>
+              <p>
+                여러 프로젝트의 팀장을 맡고 있던 2026년, 마케팅 대회 팀장까지 떠맡아 밤늦게까지 일한 적이 있습니다.
+                지금은 부탁을 받으면 역할 분담부터 정하고, 상대가 자기 몫을 해 보도록 한 뒤 제 시간이 되는 범위에서 돕습니다.
+              </p>
+            </article>
+          </div>
+
+          <div className="values">
+            <article className="value reveal">
+              <p className="kind">일할 때 지키는 기준 · 공정성</p>
+              <h3>모두를 만족시킬 수는 없어도, 왜 그렇게 정했는지는 납득할 수 있어야 합니다</h3>
+              <p>
+                팀장을 맡으면 역할을 정하기 전에 팀원 모두에게 희망 업무 1·2순위를 받습니다. 희망이 겹치면 미리 알린
+                방식대로 사다리타기로 정합니다. 결정 전에 의견을 들을 기회를 주고, 정한 기준은 끝까지 똑같이 적용합니다.
+              </p>
+            </article>
+            <article className="value reveal" style={d(1)}>
+              <p className="kind">실패에서 배운 것 · ESG 공모 ‘이음’ 팀장</p>
+              <h3>갈등을 푸는 것과 끝까지 해내는 것은 다른 일이었습니다</h3>
+              <p>
+                3개 학과 7명이 모인 팀에서 갈등이 생길 때마다 팀원을 따로 만나 이야기를 들었지만, 참여가 줄면서 프로그램을
+                끝까지 운영하지 못했습니다. 이후로는 시작할 때 운영 방식과 역할을 먼저 정하고, 팀원이 조사한 자료를 직접
+                검토해 피드백합니다. 이후 팀장을 맡은 프로젝트는 이렇게 끝까지 마쳤습니다.
+              </p>
+            </article>
+            <article className="value reveal" style={d(2)}>
+              <p className="kind">진로를 정한 과정</p>
+              <h3>잘할 수 있는 공부와 오래 하고 싶은 일은 달랐습니다</h3>
+              <p>
+                1·2학년 때는 회계를 생각했고 성적도 잘 나왔습니다. 하지만 아이들을 가르치고, 후배를 상담하고, 팀을
+                조율할 때 더 오래 관심이 갔습니다. 조직행동론과 조직이론을 듣고, 노무사 선배와 현직자의 이야기를 들으며
+                인사·HRD로 방향을 정했습니다. 숫자를 정확히 보는 습관은 인사 업무에서도 쓰입니다.
+              </p>
+            </article>
+          </div>
+
+          <div className="roadmap reveal" id="roadmap">
+            <div className="roadmapHead">
+              <p className="kind">HRD 커리어 로드맵</p>
+              <h3>아이들의 변화에서 느낀 보람을, 신입사원의 성장으로</h3>
+            </div>
+            <ol>
+              {[
+                ["지금 ~ 2028.2 졸업", "배움의 기반", "HRD 기초와 Excel을 익히고 TOEIC 850점을 목표로 합니다. 경험을 포트폴리오로 정리해 HRD 인턴에 지원합니다.", "현재 TOEIC 675점 (2025.11)"],
+                ["졸업 후 첫 직장", "첫 실무 경험", "교육 안내, 일정, 참석자와 설문 관리를 정확하게 해내고 결과보고서로 남깁니다.", "안심하고 맡길 수 있는 동료"],
+                ["30대", "적응을 설계", "신입교육과 멘토링을 기획·운영하고, 요구분석부터 효과평가까지 한 과정을 책임집니다.", "새로운 시작을 돕는 사람"],
+                ["40대", "성장 지원", "교육 데이터를 분석해 온보딩 체계를 개선하고 후배를 키우는 신입 육성 전문가가 됩니다.", "믿고 의논할 수 있는 전문가"]
+              ].map(([when, t, x, tag], i) => (
+                <li key={t}>
+                  <span className="num">{String(i + 1).padStart(2, "0")}</span>
+                  <small>{when}</small>
+                  <strong>{t}</strong>
+                  <p>{x}</p>
+                  <em>{tag}</em>
+                </li>
+              ))}
+            </ol>
+            <p className="roadmapFoot">50세에도 익숙한 방식만 고집하지 않고 새로운 교육 방법을 배우며, 일과 가족, 소중한 일상을 함께 지키는 사람이고 싶습니다.</p>
+          </div>
         </section>
 
         {/* 역량: 비대칭 그리드 */}
