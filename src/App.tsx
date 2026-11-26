@@ -30,8 +30,8 @@ const glance: { label: string; head: string; text: string; href: string; go: str
     label: "대표 경험",
     head: "팀을 이끌고 결과를 냈습니다",
     text: "사회적기업 경진대회 본선 진출 팀 ‘그린 하우스’ 팀장, 고용노동부 미래내일 일경험 5조 팀장, SMILEAGE 장기 멘토 (2026년 후배 14명 상담).",
-    href: "#project",
-    go: "프로젝트와 경험"
+    href: "#works",
+    go: "대표작 세 가지"
   },
   {
     label: "학업",
@@ -102,78 +102,6 @@ const competencies = [
   }
 ];
 
-/* 핵심 경험: 상황, 역할·행동, 결과, HR 연결 */
-type Case = {
-  year: string;
-  tag: string;
-  title: string;
-  period: string;
-  situation: string;
-  action: string;
-  result: string;
-  link: string;
-  photo?: string;
-  photoAlt?: string;
-  detail?: string;
-};
-
-const cases: Case[] = [
-  {
-    year: "2024",
-    tag: "학습 설계 · 리더십",
-    title: "디딤돌그룹 리더·튜터",
-    period: "약 10주",
-    situation: "토익을 함께 공부하는 스터디 그룹에서 팀원마다 수준과 어려움이 달랐습니다.",
-    action: "리더·튜터로서 학습계획과 자료를 직접 만들고, 팀원의 어려움에 맞춰 학습 방식을 조정했습니다.",
-    result: "우수팀 선정",
-    link: "구성원 수준에 맞춘 교육 설계는 HRD 업무의 기본입니다."
-  },
-  {
-    year: "2024",
-    tag: "코칭 · 장기 관계",
-    title: "늘벗 공부방 영어 멘토링",
-    period: "약 7개월",
-    situation: "중학생 멘티의 영어 기초가 영역마다 고르지 않았습니다.",
-    action: "먼저 수준을 진단하고, 어휘·문법·독해를 멘티에게 맞춰 나누어 지도했습니다.",
-    result: "7개월간 한 멘티와 꾸준한 관계 유지",
-    link: "진단한 뒤 맞춤으로 지원하는 방식은 구성원 육성·코칭과 같습니다."
-  },
-  {
-    year: "2025 – 현재",
-    tag: "멘토링 · 커리어 설계",
-    title: "SMILEAGE 장기 멘토",
-    period: "2025 ~ 2026.2학기",
-    situation: "외국어 포트폴리오를 준비하는 학생들이 활동을 하나의 이야기로 엮는 데 어려움을 겪었습니다.",
-    action: "학생의 경험과 목표를 먼저 듣고, 활동 간 연결·성찰·향후 계획을 함께 정리했습니다.",
-    result: "2026년 한 해 후배 14명 상담 · 대상 수상 경험을 후배의 성장 지원으로 확장",
-    link: "경력 개발 면담과 성장 계획 수립에 그대로 이어지는 경험입니다."
-  },
-  {
-    year: "2026",
-    tag: "스토리텔링 · 직무 연결",
-    title: "HUMAN LINK 외국어 포트폴리오",
-    detail: "humanlink",
-    period: "2026",
-    situation: "3년 동안의 외국어 경험이 시기별로 흩어져 있어 하나의 방향으로 보이지 않았습니다.",
-    action: "나 → 너 → 세계 → 일 → 다음의 흐름으로 경험을 다시 엮어, HRD 진로와 하나의 이야기로 연결했습니다.",
-    result: "2026 SMILEAGE 외국어 포트폴리오 경진대회 동상 (1학년 대상에 이어 두 번째 수상)",
-    link: "경험을 직무 역량의 언어로 바꾸는 일은 채용과 인재 평가의 핵심입니다."
-  },
-  {
-    year: "2026",
-    tag: "글로벌 소통 · 적응",
-    title: "FLY TRACK 1 캐나다 캘거리 연수",
-    detail: "canada",
-    period: "2026.7.2 ~ 7.25 · 3주",
-    photo: "/canada-class.jpg",
-    photoAlt: "Mount Royal University 여름 영어 프로그램 수업 자리의 이름표와 필기 노트",
-    situation: "낯선 나라에서 3주 동안 생활하며, 다양한 국적의 학생들과 영어로 수업을 들어야 했습니다.",
-    action: "매시간 새로 짜인 다국적 조에서 토론하고 발표했고, 밴프 체험 뒤에는 고른 사진과 이유를 영어로 발표했습니다. 일본인 룸메이트와 함께 생활하며 서로의 문화를 나눴습니다.",
-    result: "연수 후에도 이어지는 관계, 결과보고서에 ‘연수 초반 현지 적응 오리엔테이션 보강’을 건의",
-    link: "새 환경에 들어온 사람이 무엇을 필요로 하는지 직접 겪은 경험은 온보딩 설계로 이어집니다."
-  }
-];
-
 /* 학업 */
 const courses = [
   {
@@ -222,21 +150,18 @@ const years = [
     step: "1학년 · 탐색",
     head: "나의 성장 방식을 먼저 배운 해",
     text: "외국어 학습, 전공 과제, 멘토링과 공모전을 폭넓게 경험하며 계획하고 기록하고 돌아보는 습관을 만들었습니다.",
-    extra: ["SMILEAGE 포트폴리오 대상", "디딤돌그룹 리더·튜터", "늘벗 공부방 멘토링", "초등학생 영어캠프 보조요원"]
   },
   {
     y: "2025",
     step: "2학년 · 연결",
     head: "다른 사람의 성장을 돕기 시작한 해",
     text: "조직행동론으로 사람의 행동과 동기를 배우고, SMILEAGE 멘토로 실제 누군가의 성장 과정을 함께 설계했습니다.",
-    extra: ["지역아동센터 교육멘토 시작 (3월~)", "SMILEAGE 멘토 시작", "조직행동론 팀 프로젝트", "독서왕 서평쓰기 장려상"]
   },
   {
     y: "2026",
     step: "3학년 · 정의",
     head: "HR이라는 방향을 분명히 한 해",
     text: "멘토링을 이어가며 해외 연수와 팀 프로젝트를 경험했고, 사회적기업의 인사·교육 제도를 직접 설계해 보며 HR 인사담당이라는 목표를 구체화했습니다. 2학기에는 YLC와 미래내일 일경험에서 여러 팀을 거치며 협업 경험을 넓혔습니다.",
-    extra: ["원가회계 원가구조 분석 (1학기)", "캐나다 캘거리 연수 (7월)", "조직이론 팀 프로젝트 · 사회적기업 경진대회 본선 진출 (팀장)", "HUMAN LINK 동상", "CLEVER:ON 장려상", "YLC 대외활동 (9월~)", "미래내일 일경험 5조 팀장", "ESG 공모 ‘이음’ 팀장"]
   }
 ];
 
@@ -288,6 +213,55 @@ const ylc = [
     hr: "다인원 협업"
   }
 ];
+
+/* 전체 활동: at은 정렬용(연.월), flag는 대표작 위치 */
+type Act = {
+  cat: string;
+  at: string;
+  when: string;
+  title: string;
+  role: string;
+  topic?: string;
+  text: string;
+  result?: string;
+  detail?: string;
+  anchor?: string;
+  flag?: string;
+};
+
+const actCats: [string, string][] = [
+  ["교육 · 멘토링", "가르치고 상담하며 한 사람의 성장을 곁에서 도운 활동"],
+  ["팀 프로젝트 · 일경험", "팀을 꾸리고 역할을 나눠 결과물을 만든 활동"],
+  ["대외활동 · 연수", "학교 밖에서 새로운 팀과 환경에 들어가 본 활동"],
+  ["공모전 · 수상", "배운 것과 겪은 것을 글과 포트폴리오로 정리한 활동"]
+];
+
+const acts: Act[] = [
+  { cat: "교육 · 멘토링", at: "2025.03", when: "2025.3 ~ 현재", title: "지역아동센터 교육멘토", role: "교외근로 장학생 · 초등학생 영어·수학 지도", text: "학습을 거부하던 경계선 지능 아이를 1년 동안 맡아, 나눗셈을 스스로 풀고 먼저 도움을 요청하도록 이끌었습니다.", anchor: "#about" },
+  { cat: "교육 · 멘토링", at: "2025.02", when: "2025 ~ 현재", title: "SMILEAGE 장기 멘토", role: "외국어 포트폴리오 멘토", text: "포트폴리오를 준비하는 후배의 경험과 목표를 듣고 활동의 연결과 계획을 함께 정리합니다.", result: "2026년 14명 상담", flag: "#work-3" },
+  { cat: "교육 · 멘토링", at: "2026.04", when: "2026.4 ~ 현재", title: "다문화 멘토링", role: "멘토 · 장학 활동", text: "다문화 멘토링 장학생으로 멘토 활동을 하고 있습니다." },
+  { cat: "교육 · 멘토링", at: "2024.08", when: "약 7개월", title: "늘벗 공부방 영어 멘토링", role: "중학생 멘티 1:1", text: "먼저 수준을 진단하고, 어휘·문법·독해를 멘티에게 맞춰 나누어 지도했습니다." },
+  { cat: "교육 · 멘토링", at: "2024.09", when: "약 10주", title: "디딤돌그룹 리더·튜터", role: "토익 스터디 리더", text: "학습계획과 자료를 직접 만들고, 팀원마다 막히는 지점에 맞춰 학습 방식을 조정했습니다.", result: "우수팀 선정" },
+  { cat: "교육 · 멘토링", at: "2024.07", when: "2024.7", title: "선문 초등영어캠프 보조교원", role: "근로장학생", text: "초등학생 대상 영어캠프에서 교육활동을 보조했습니다." },
+  { cat: "교육 · 멘토링", at: "2024.06", when: "2024", title: "개인 영어 과외", role: "학생 2명", text: "학생 2명에게 영어를 가르쳤습니다." },
+
+  { cat: "팀 프로젝트 · 일경험", at: "2026.11", when: "2026 · 4주", title: "고용노동부 미래내일 일경험", role: "5조 ‘뷰티 인사이트’ 팀장 · 참여기업 아이디뷰티", text: "헤어 매장 고객관리(CRM) 앱과 데이터 관리 전략을 기획하고 직원용 시연 웹앱을 만들었습니다.", detail: "work", flag: "#work-2" },
+  { cat: "팀 프로젝트 · 일경험", at: "2026.10", when: "2026-2", title: "사회적기업 경진대회 ‘그린 하우스’", role: "조직이론 팀 프로젝트 · 5인 팀장", text: "자립준비청년이 일터에서 오래 성장하도록 경력성장 체계와 의견 수렴 절차를 설계했습니다.", result: "본선 진출", detail: "greenhouse", flag: "#work-1" },
+  { cat: "팀 프로젝트 · 일경험", at: "2026.03", when: "2026.3 ~ 9", title: "ESG 공모 ‘이음’", role: "팀장 · 3개 학과 7명", text: "운영을 끝까지 마치지 못했습니다. 이 경험 뒤로 시작할 때 운영 방식과 역할부터 정합니다.", anchor: "#about" },
+  { cat: "팀 프로젝트 · 일경험", at: "2026.05", when: "2026-1", title: "원가회계 원가구조 분석", role: "2인 팀", text: "무인 포토부스의 원가구조를 분석하고 수익성 향상 전략을 제안했습니다.", detail: "cost" },
+  { cat: "팀 프로젝트 · 일경험", at: "2025.05", when: "2025-1", title: "조직행동론 팀 프로젝트", role: "조직행동론 수업", text: "트럼프 관세정책을 주제로 팀 프로젝트를 수행했습니다." },
+
+  ...ylc.map((y, i): Act => ({ cat: "대외활동 · 연수", at: `2026.${["09", "09", "10", "10", "11"][i]}`, when: y.when, title: y.name, role: y.team, topic: y.topic, text: y.mine, detail: y.id })),
+  { cat: "대외활동 · 연수", at: "2026.07", when: "2026.7 · 3주", title: "FLY TRACK 1 캐나다 캘거리 연수", role: "Mount Royal University 여름 영어 프로그램", text: "매시간 다른 국적의 학생들과 조를 짜 토론하고 발표했고, 결과보고서에 현지 적응 오리엔테이션 보강을 건의했습니다.", detail: "canada" },
+
+  { cat: "공모전 · 수상", at: "2026.10", when: "2026", title: "SMILEAGE 외국어 포트폴리오 ‘HUMAN LINK’", role: "개인", text: "3년의 외국어 경험을 HRD 진로와 하나의 이야기로 엮었습니다.", result: "동상", detail: "humanlink", flag: "#work-3" },
+  { cat: "공모전 · 수상", at: "2026.09", when: "2026", title: "CLEVER:ON 교수·학습 우수사례 공모전", role: "수기분야", text: "PetMart 웹 서비스를 만들며 익힌 THINK → ASK → CHECK → REBUILD 학습법을 수기로 정리했습니다.", result: "장려상 · 혁신원장상", detail: "cleveron" },
+  { cat: "공모전 · 수상", at: "2025.10", when: "2025.10", title: "도전! 선문 독서왕 서평쓰기 대회", role: "서평쓰기", text: "", result: "장려상" },
+  { cat: "공모전 · 수상", at: "2024.11.3", when: "2024.11", title: "제2회 SMILEAGE 외국어 포트폴리오 경진대회", role: "개인", text: "1년 동안의 외국어 학습을 목표·과정·성과·성찰로 정리했습니다.", result: "대상", detail: "smileage", flag: "#work-3" },
+  { cat: "공모전 · 수상", at: "2024.11.2", when: "2024.11", title: "도전장학 스토리캐스팅", role: "도전장학", text: "", result: "최우수상" },
+  { cat: "공모전 · 수상", at: "2024.11.1", when: "2024.11", title: "학습법 관련 우수사례 공모전", role: "학습법 우수사례", text: "", result: "장려상" }
+];
+const sortedActs = [...acts].sort((x, y) => (x.at < y.at ? 1 : -1));
 
 const awardDetail: Record<string, string> = {
   "2026 SMILEAGE 외국어 포트폴리오 경진대회 (HUMAN LINK)": "humanlink",
@@ -458,6 +432,7 @@ export default function App() {
   }, []);
 
   const [open, setOpen] = useState<string | null>(null);
+  const [view, setView] = useState<"cat" | "year">("cat");
   const More = ({ id, label = "자세히 보기" }: { id: string; label?: string }) => (
     <button type="button" className="more" onClick={() => setOpen(id)}>
       {label} <span className="moreIcon"><Arrow /></span>
@@ -473,12 +448,10 @@ export default function App() {
         <div className="navLinks">
           <a href="#glance">한눈에</a>
           <a href="#about">소개</a>
+          <a href="#works">대표작</a>
+          <a href="#archive">전체 활동</a>
           <a href="#skills">역량</a>
-          <a href="#project">프로젝트</a>
-          <a href="#cases">경험</a>
-          <a href="#activities">대외활동</a>
           <a href="#study">학업</a>
-          <a href="#growth">성장</a>
           <a href="#awards">수상·장학</a>
         </div>
       </nav>
@@ -498,7 +471,7 @@ export default function App() {
               <a href="#glance" className="btn">
                 한눈에 보기 <span className="btnIcon"><Arrow /></span>
               </a>
-              <a href="#project" className="btn ghost">대표 프로젝트</a>
+              <a href="#works" className="btn ghost">대표작 보기</a>
             </div>
           </div>
 
@@ -661,35 +634,36 @@ export default function App() {
           </div>
         </section>
 
-        {/* 역량: 비대칭 그리드 */}
-        <section className="block" id="skills">
-          <SectionHead
-            label="HR 역량"
-            title="인사담당자에게 필요한 역량을 경험으로 쌓았습니다"
-            text="각 역량이 HR 업무의 어디에 쓰이는지, 어떤 경험이 근거인지 함께 적었습니다."
-          />
-          <div className="skills">
-            {competencies.map((c, i) => (
-              <article key={c.no} className={`skill reveal${i === 0 ? " featured" : ""}`} style={d(i % 3)}>
-                <div className="skillTop">
-                  <span className="num">{c.no}</span>
-                  <em>{c.hr}</em>
-                </div>
-                <h3>{c.title}</h3>
-                <p>{c.text}</p>
-                <ul>
-                  {c.proof.map((p) => <li key={p}>{p}</li>)}
-                </ul>
-              </article>
-            ))}
+        {/* 대표작: 세 가지를 먼저 보여 줌 */}
+        <section className="works" id="works">
+          <div className="worksHead reveal">
+            <p className="secLabel">대표작</p>
+            <h2>저를 가장 잘 보여 주는 세 가지 작업</h2>
+            <p>인사 제도를 설계한 일, 팀을 이끌어 결과를 낸 일, 사람의 성장을 곁에서 도운 일을 하나씩 골랐습니다. 나머지 활동은 아래 ‘전체 활동’에 모두 모았습니다.</p>
           </div>
+          <ol className="worksIndex">
+            {[
+              ["#work-1", "사회적기업 경진대회 ‘그린 하우스’", "팀장 · 자립준비청년 인사 제도 설계 · 본선 진출"],
+              ["#work-2", "고용노동부 미래내일 일경험", "5조 팀장 · 헤어 매장 CRM 기획과 시연 영상"],
+              ["#work-3", "SMILEAGE 포트폴리오와 멘토링", "대상 수상 → 장기 멘토 · 2026년 후배 14명 상담"]
+            ].map(([href, t, x], i) => (
+              <li key={href} className="reveal" style={d(i)}>
+                <a href={href}>
+                  <span className="num">{String(i + 1).padStart(2, "0")}</span>
+                  <strong>{t}</strong>
+                  <small>{x}</small>
+                  <span className="moreIcon"><Arrow /></span>
+                </a>
+              </li>
+            ))}
+          </ol>
         </section>
 
-        {/* 대표 프로젝트: 사회적기업 경진대회 */}
-        <section className="block tinted" id="project">
+        {/* 대표작 01: 사회적기업 경진대회 */}
+        <section className="block tinted work" id="work-1">
           <div className="blockInner">
             <SectionHead
-              label="대표 프로젝트"
+              label="대표작 01 · 팀 프로젝트"
               title="자립준비청년이 일터에서 오래 성장하도록, 인사 제도를 설계했습니다"
               text="조직이론(3학년 2학기) 팀 프로젝트 · 2026 제2회 전국 대학생 사회적기업 우수사례발굴 경진대회 유형 A 본선 진출 · 5인 팀 ‘그린 하우스’ 팀장"
             />
@@ -772,76 +746,13 @@ export default function App() {
           </div>
         </section>
 
-        {/* 대표 성과: 단일 스포트라이트 */}
-        <section className="block" aria-label="대표 성과">
-          <article className="spotlight reveal">
-            <div className="leadBadge">
-              <span>SMILEAGE 경진대회</span>
-              <strong>대상</strong>
-            </div>
-            <div>
-              <p className="kind">대표 성과 · 2024</p>
-              <h3>배운 것을 기록하자, 성장이 보이기 시작했습니다.</h3>
-              <p>
-                1년간의 외국어 학습을 목표·과정·성과·성찰로 정리한 포트폴리오로 제2회 SMILEAGE 외국어 포트폴리오
-                경진대회에서 대상을 받았습니다. 이 경험이 이후 후배들의 포트폴리오를 돕는 멘토 활동으로
-                이어졌습니다.
-              </p>
-              <ul className="chips">
-                <li>목표 설정</li>
-                <li>과정 기록</li>
-                <li>성찰</li>
-                <li>성과 정리</li>
-              </ul>
-              <More id="smileage" label="포트폴리오 보기" />
-            </div>
-          </article>
-        </section>
-
-        {/* 핵심 경험: 케이스 행 */}
-        <section className="block tinted" id="cases">
-          <div className="blockInner">
-            <SectionHead
-              label="핵심 경험"
-              title="상황, 행동, 결과로 정리한 다섯 가지 경험"
-              text="경험마다 마지막 줄에 HR 업무와 어떻게 이어지는지 적었습니다."
-            />
-            <div className="cases">
-              {cases.map((c) => (
-                <article className="case reveal" key={c.title}>
-                  <div className="caseMeta">
-                    {c.photo && <img src={c.photo} alt={c.photoAlt} loading="lazy" decoding="async" />}
-                    <span className="num">{c.year}</span>
-                    <h3>{c.title}</h3>
-                    <p>{c.tag}</p>
-                    <small>{c.period}</small>
-                  </div>
-                  <div className="caseMain">
-                    <dl className="caseBody">
-                      <div><dt>상황</dt><dd>{c.situation}</dd></div>
-                      <div><dt>역할·행동</dt><dd>{c.action}</dd></div>
-                      <div><dt>결과</dt><dd className="result">{c.result}</dd></div>
-                    </dl>
-                    <p className="caseLink">
-                      <span>HR 연결</span>
-                      {c.link}
-                    </p>
-                    {c.detail && <More id={c.detail} label={c.detail === "humanlink" ? "포트폴리오 보기" : "결과보고서 보기"} />}
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 대외활동: 대표 1건 + YLC 목록 */}
-        <section className="block" id="activities">
+        {/* 대표작 02: 미래내일 일경험 */}
+        <section className="block work" id="work-2">
           <SectionHead
-            label="대외활동"
-            title="3학년 2학기, 여러 팀에 들어가 함께 일하는 법을 익혔습니다"
-            text="고용노동부 미래내일 일경험에서는 팀장을, YLC에서는 팀마다 다른 역할을 맡았습니다."
+            label="대표작 02 · 일경험"
+            title="현장 직원이 실제로 쓸 수 있는 방식을, 팀장으로 기획했습니다"
+            text="고용노동부 미래내일 일경험 프로젝트형 · 2026 · 5조 ‘뷰티 인사이트’ 팀장"
           />
-
           <article className="program reveal">
             <div className="programText">
               <p className="kind">고용노동부 「미래내일 일경험」 프로젝트형 · 참여기업 아이디뷰티</p>
@@ -878,28 +789,130 @@ export default function App() {
             </figure>
           </article>
 
-          <div className="ylc">
-            <div className="ylcHead reveal">
-              <h3>YLC · Young Leader Club</h3>
-              <p>2026년 9월부터 활동하고 있습니다. 토론, 공모전, 산업 분석마다 팀이 새로 꾸려졌고, 맡은 역할도 매번 달랐습니다.</p>
+        </section>
+
+        {/* 대표작 03: 기록과 멘토링 */}
+        <section className="block tinted work" id="work-3">
+          <div className="blockInner">
+            <SectionHead
+              label="대표작 03 · 기록과 멘토링"
+              title="기록하는 법으로 대상을 받고, 그 방법으로 후배의 성장을 도왔습니다"
+              text="SMILEAGE 외국어 포트폴리오 · 2024 대상 → 2025년부터 장기 멘토 → 2026 동상 (HUMAN LINK)"
+            />
+            <div className="mentor">
+              <div className="mentorText">
+                <ol className="mentorSteps">
+                  <li className="reveal">
+                    <small className="num">2024 · 1학년</small>
+                    <strong>대상 <span>제2회 SMILEAGE 외국어 포트폴리오 경진대회</span></strong>
+                    <p>1년 동안의 외국어 학습을 목표·과정·성과·성찰로 정리했습니다. 직접 만든 STAR 기준으로 활동을 돌아보고, 다음 학습 계획에 반영했습니다.</p>
+                    <More id="smileage" label="1학년 포트폴리오 전체 보기" />
+                  </li>
+                  <li className="reveal" style={d(1)}>
+                    <small className="num">2025 ~ 현재</small>
+                    <strong>장기 멘토 <span>2026년 한 해 후배 14명 상담</span></strong>
+                    <p>포트폴리오를 준비하는 후배의 경험과 목표를 먼저 듣고, 활동 사이의 연결과 성찰, 다음 계획을 함께 정리합니다. 상을 받은 경험을 다른 사람의 성장을 돕는 일로 넓혔습니다.</p>
+                  </li>
+                  <li className="reveal" style={d(2)}>
+                    <small className="num">2026 · 3학년</small>
+                    <strong>동상 <span>HUMAN LINK 외국어 포트폴리오</span></strong>
+                    <p>3년의 외국어 경험을 나 → 너 → 세계 → 일 → 다음의 흐름으로 다시 엮어, HRD 진로와 하나의 이야기로 연결했습니다.</p>
+                    <More id="humanlink" label="HUMAN LINK 보기" />
+                  </li>
+                </ol>
+                <p className="caseLink reveal">
+                  <span>HR 연결</span>
+                  한 사람의 경험을 듣고 성장 계획으로 정리해 주는 일은 경력 개발 면담과 같습니다.
+                </p>
+              </div>
+              <div className="mentorImgs reveal" style={d(1)}>
+                <button type="button" onClick={() => setOpen("smileage")}>
+                  <img src="/docs/smileage2024full-14.jpg" alt="2024 포트폴리오 ‘나의 역량’ 페이지: steady, tenacious, ambitious, resourceful" loading="lazy" decoding="async" />
+                  <span>2024 대상 포트폴리오</span>
+                </button>
+                <button type="button" onClick={() => setOpen("humanlink")}>
+                  <img src="/docs/humanlink-03.jpg" alt="HUMAN LINK 개요 페이지: 2024년부터 졸업 이후까지 ME, YOU, WORLD, WORK, NEXT 흐름" loading="lazy" decoding="async" />
+                  <span>2026 HUMAN LINK</span>
+                </button>
+              </div>
             </div>
-            <ol className="ylcList">
-              {ylc.map((a, i) => (
-                <li className="ylcRow reveal" key={a.name} style={d(i % 3)}>
-                  <span className="num ylcWhen">{a.when}</span>
-                  <div className="ylcName">
-                    <strong>{a.name}</strong>
-                    <small>{a.team}</small>
-                  </div>
-                  <div className="ylcWork">
-                    <p className="ylcTopic">{a.topic}</p>
-                    <p>{a.mine}</p>
-                    <More id={a.id} />
-                  </div>
-                  <em>{a.hr}</em>
-                </li>
-              ))}
-            </ol>
+          </div>
+        </section>
+
+        {/* 전체 활동: 분야별·연도별 보기 */}
+        <section className="block" id="archive">
+          <SectionHead
+            label="전체 활동"
+            title="3년 동안 해 온 활동을 모두 모았습니다"
+            text="분야별 또는 연도별로 볼 수 있습니다. ‘자료 보기’를 누르면 보고서와 발표 자료가 열립니다."
+          />
+          <div className="archiveTabs reveal" role="tablist" aria-label="정리 방식">
+            {([["cat", "분야별"], ["year", "연도별"]] as const).map(([v, t]) => (
+              <button key={v} type="button" role="tab" aria-selected={view === v} className={view === v ? "on" : ""} onClick={() => setView(v)}>
+                {t}
+              </button>
+            ))}
+          </div>
+          <div className="archGroups" key={view}>
+            {(view === "cat"
+              ? actCats.map(([c, sub]) => ({ head: c, sub, items: sortedActs.filter((a) => a.cat === c) }))
+              : years.map((y) => ({ head: y.y, sub: `${y.step} · ${y.head}`, items: sortedActs.filter((a) => a.at.startsWith(y.y)) })).reverse()
+            ).map((g) => (
+              <div className="archGroup" key={g.head}>
+                <div className="archGroupHead">
+                  <h3>{g.head}</h3>
+                  <p>{g.sub}</p>
+                  <span className="num">{g.items.length}개 활동</span>
+                </div>
+                <ul>
+                  {g.items.map((a) => (
+                    <li className="archItem" key={a.title}>
+                      <span className="num archWhen">{a.when}</span>
+                      <div className="archMain">
+                        <strong>{a.title}</strong>
+                        <small>{a.role}</small>
+                        {a.topic && <p className="archTopic">{a.topic}</p>}
+                        {a.text && <p>{a.text}</p>}
+                      </div>
+                      <div className="archSide">
+                        {view === "year" && <em>{a.cat}</em>}
+                        {a.flag && <a className="archFlag" href={a.flag}>대표작</a>}
+                        {a.result && <b>{a.result}</b>}
+                        {a.detail ? (
+                          <More id={a.detail} label="자료 보기" />
+                        ) : a.anchor ? (
+                          <a className="more" href={a.anchor}>이야기 보기 <span className="moreIcon"><Arrow /></span></a>
+                        ) : null}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 역량: 비대칭 그리드 */}
+        <section className="block" id="skills">
+          <SectionHead
+            label="HR 역량"
+            title="인사담당자에게 필요한 역량을 경험으로 쌓았습니다"
+            text="각 역량이 HR 업무의 어디에 쓰이는지, 어떤 경험이 근거인지 함께 적었습니다."
+          />
+          <div className="skills">
+            {competencies.map((c, i) => (
+              <article key={c.no} className={`skill reveal${i === 0 ? " featured" : ""}`} style={d(i % 3)}>
+                <div className="skillTop">
+                  <span className="num">{c.no}</span>
+                  <em>{c.hr}</em>
+                </div>
+                <h3>{c.title}</h3>
+                <p>{c.text}</p>
+                <ul>
+                  {c.proof.map((p) => <li key={p}>{p}</li>)}
+                </ul>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -935,28 +948,6 @@ export default function App() {
               </div>
             ))}
           </div>
-        </section>
-
-        {/* 성장 흐름: 연도 행 */}
-        <section className="block" id="growth">
-          <SectionHead label="성장 흐름" title="넓게 경험하고, 사람을 이해하고, 진로로 정의했습니다" />
-          <ol className="years">
-            {years.map((y, i) => (
-              <li className="yearRow reveal" key={y.y} style={d(i)}>
-                <div className="yearNum">
-                  <strong>{y.y}</strong>
-                  <span>{y.step}</span>
-                </div>
-                <div className="yearText">
-                  <h3>{y.head}</h3>
-                  <p>{y.text}</p>
-                </div>
-                <ul>
-                  {y.extra.map((e) => <li key={e}>{e}</li>)}
-                </ul>
-              </li>
-            ))}
-          </ol>
         </section>
 
         {/* 수상 */}
