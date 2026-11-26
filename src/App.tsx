@@ -29,7 +29,7 @@ const glance: { label: string; head: string; text: string; href: string; go: str
   {
     label: "대표 경험",
     head: "팀을 이끌고 결과를 냈습니다",
-    text: "사회적기업 경진대회 본선 진출 팀 ‘그린 하우스’ 팀장, 고용노동부 미래내일 일경험 5조 팀장, SMILEAGE 장기 멘토 (2026년 후배 14명 상담).",
+    text: "사회적기업 경진대회 본선 진출 팀 ‘그린 하우스’ 팀장, 고용노동부 미래내일 일경험 5조 팀장, SMILEAGE 장기 멘토 (해마다 후배 10~14명 상담).",
     href: "#works",
     go: "대표작 세 가지"
   },
@@ -238,7 +238,7 @@ const actCats: [string, string][] = [
 
 const acts: Act[] = [
   { cat: "교육 · 멘토링", at: "2025.03", when: "2025.3 ~ 현재", title: "지역아동센터 교육멘토", role: "교외근로 장학생 · 초등학생 영어·수학 지도", text: "학습을 거부하던 경계선 지능 아이를 1년 동안 맡아, 나눗셈을 스스로 풀고 먼저 도움을 요청하도록 이끌었습니다.", anchor: "#about" },
-  { cat: "교육 · 멘토링", at: "2025.02", when: "2025 ~ 현재", title: "SMILEAGE 장기 멘토", role: "외국어 포트폴리오 멘토", text: "포트폴리오를 준비하는 후배의 경험과 목표를 듣고 활동의 연결과 계획을 함께 정리합니다.", result: "2026년 14명 상담", flag: "#work-3" },
+  { cat: "교육 · 멘토링", at: "2025.02", when: "2025 ~ 현재", title: "SMILEAGE 장기 멘토", role: "외국어 포트폴리오 멘토", text: "포트폴리오를 준비하는 후배의 경험과 목표를 듣고 활동의 연결과 계획을 함께 정리합니다.", result: "해마다 10~14명 상담", flag: "#work-3" },
   { cat: "교육 · 멘토링", at: "2026.04", when: "2026.4 ~ 현재", title: "다문화 멘토링", role: "멘토 · 장학 활동", text: "다문화 멘토링 장학생으로 멘토 활동을 하고 있습니다." },
   { cat: "교육 · 멘토링", at: "2024.08", when: "약 7개월", title: "늘벗 공부방 영어 멘토링", role: "중학생 멘티 1:1", text: "먼저 수준을 진단하고, 어휘·문법·독해를 멘티에게 맞춰 나누어 지도했습니다." },
   { cat: "교육 · 멘토링", at: "2024.09", when: "약 10주", title: "디딤돌그룹 리더·튜터", role: "토익 스터디 리더", text: "학습계획과 자료를 직접 만들고, 팀원마다 막히는 지점에 맞춰 학습 방식을 조정했습니다.", result: "우수팀 선정" },
@@ -645,7 +645,7 @@ export default function App() {
             {[
               ["#work-1", "사회적기업 경진대회 ‘그린 하우스’", "팀장 · 자립준비청년 인사 제도 설계 · 본선 진출"],
               ["#work-2", "고용노동부 미래내일 일경험", "5조 팀장 · 헤어 매장 CRM 기획과 시연 영상"],
-              ["#work-3", "SMILEAGE 포트폴리오와 멘토링", "대상 수상 → 장기 멘토 · 2026년 후배 14명 상담"]
+              ["#work-3", "SMILEAGE 포트폴리오와 멘토링", "대상 수상 → 장기 멘토 · 해마다 후배 10~14명 상담"]
             ].map(([href, t, x], i) => (
               <li key={href} className="reveal" style={d(i)}>
                 <a href={href}>
@@ -810,7 +810,7 @@ export default function App() {
                   </li>
                   <li className="reveal" style={d(1)}>
                     <small className="num">2025 ~ 현재</small>
-                    <strong>장기 멘토 <span>2026년 한 해 후배 14명 상담</span></strong>
+                    <strong>장기 멘토 <span>해마다 후배 10~14명 상담</span></strong>
                     <p>포트폴리오를 준비하는 후배의 경험과 목표를 먼저 듣고, 활동 사이의 연결과 성찰, 다음 계획을 함께 정리합니다. 상을 받은 경험을 다른 사람의 성장을 돕는 일로 넓혔습니다.</p>
                   </li>
                   <li className="reveal" style={d(2)}>
