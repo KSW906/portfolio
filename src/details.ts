@@ -103,13 +103,10 @@ export const details: Record<string, Detail> = {
       { head: "범위 조정", text: "‘AI가 절도를 판정한다’ 대신 ‘점주의 확인 시간을 줄인다’로 목표를 현실적으로 좁혔습니다." },
       { head: "피드백 반영", text: "멘토가 짚은 원가, 판로, 도입 방식을 차별점과 함께 다시 정리했습니다." }
     ],
-    gallery: pages("startup-ideas", [2, 3, 4]),
+    gallery: pages("startup-plan-b", [1, 2, 3]),
     files: [
-      { label: "아이디어 보고서 (직접 작성)", href: doc("startup-ideas") },
       { label: "1차 사업계획서", href: doc("startup-plan") },
-      { label: "에비던스원 사업계획서 A (11쪽)", href: doc("startup-plan-a") },
-      { label: "에비던스원 사업계획서 B (8쪽)", href: doc("startup-plan-b") },
-      { label: "멘토 피드백 반영 수정안", href: doc("startup-revise") }
+      { label: "에비던스원 사업계획서 (8쪽)", href: doc("startup-plan-b") }
     ]
   },
 
