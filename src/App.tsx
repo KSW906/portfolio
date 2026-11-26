@@ -117,6 +117,7 @@ const cases: Case[] = [
     year: "2026",
     tag: "글로벌 소통 · 적응",
     title: "FLY TRACK 1 캐나다 캘거리 연수",
+    detail: "canada",
     period: "2026.7.2 ~ 7.25 · 3주",
     photo: "/canada-class.jpg",
     photoAlt: "Mount Royal University 여름 영어 프로그램 수업 자리의 이름표와 필기 노트",
@@ -378,7 +379,7 @@ function DetailSheet({ id, onClose }: { id: string | null; onClose: () => void }
                   </li>
                 ))}
               </ul>
-              <p className="sheetNote">원본 그대로 실었습니다. 용량이 큰 파일은 화질만 조금 낮췄습니다.</p>
+              <p className="sheetNote">원본 그대로 실었습니다. 한글(HWP) 파일은 PDF로 변환했고, 용량이 큰 파일은 화질만 조금 낮췄습니다.</p>
             </section>
           ) : (
             <p className="sheetNote">이 활동의 원본 자료는 한글(HWP) 파일이라 요약만 실었습니다.</p>
@@ -651,7 +652,7 @@ export default function App() {
                       <span>HR 연결</span>
                       {c.link}
                     </p>
-                    {c.detail && <More id={c.detail} label="포트폴리오 보기" />}
+                    {c.detail && <More id={c.detail} label={c.detail === "humanlink" ? "포트폴리오 보기" : "결과보고서 보기"} />}
                   </div>
                 </article>
               ))}

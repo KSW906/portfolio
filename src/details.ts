@@ -41,7 +41,7 @@ export const details: Record<string, Detail> = {
   },
 
   work: {
-    kicker: "고용노동부 미래내일 일경험 프로젝트형 · 참여기업 아이디뷰티",
+    kicker: "고용노동부 미래내일 일경험 프로젝트형 · 운영기관 (사)국제경영원 · 참여기업 아이디뷰티",
     title: "헤어뷰티 매장 맞춤형 CRM 앱 서비스 기획",
     summary:
       "4주 동안 5조 ‘뷰티 인사이트’의 팀장으로, 헤어 매장이 손님의 요청과 시술 기록을 다음 방문까지 이어 갈 수 있는 고객관리 서비스를 기획했습니다. 매주 한 번 팀 회의를 하며 조사, 인터뷰, 아이디어, 시연까지 진행했습니다.",
@@ -80,7 +80,13 @@ export const details: Record<string, Detail> = {
       { head: "대안", text: "세율을 낮추기보다 연부연납·물납 제도를 고쳐 납부 부담을 줄이자고 제안했습니다." }
     ],
     gallery: [],
-    files: []
+    files: [
+      { label: "토론 주제와 입론", href: doc("debate-case") },
+      { label: "세 번째 토론자 반론 (직접 작성)", href: doc("debate-rebuttal") },
+      { label: "입론에 대한 예상 반론", href: doc("debate-expected") },
+      { label: "교차조사 질문 정리", href: doc("debate-cross") },
+      { label: "마지막 발언", href: doc("debate-closing") }
+    ]
   },
 
   startup: {
@@ -101,6 +107,8 @@ export const details: Record<string, Detail> = {
     files: [
       { label: "아이디어 보고서 (직접 작성)", href: doc("startup-ideas") },
       { label: "1차 사업계획서", href: doc("startup-plan") },
+      { label: "에비던스원 사업계획서 A (11쪽)", href: doc("startup-plan-a") },
+      { label: "에비던스원 사업계획서 B (8쪽)", href: doc("startup-plan-b") },
       { label: "멘토 피드백 반영 수정안", href: doc("startup-revise") }
     ]
   },
@@ -214,6 +222,20 @@ export const details: Record<string, Detail> = {
       { label: "수기", href: doc("cleveron") },
       { label: "성과페스타 전시 자료", href: doc("cleveron-poster") }
     ]
+  },
+
+  canada: {
+    kicker: "선문대학교 FLY TRACK 1 · 2026.7.2 ~ 7.25",
+    title: "캐나다 캘거리 Mount Royal University 3주 연수",
+    summary:
+      "3주 동안 캘거리에서 생활하며 다양한 국적의 학생들과 영어로 수업을 들었습니다. 매시간 새로 짜인 조에서 토론하고 발표했고, 밴프 체험 뒤에는 고른 사진과 그 이유를 영어로 발표했습니다.",
+    role: ["연수 참여와 결과보고서 작성", "일본인 룸메이트와 생활하며 서로의 문화 공유"],
+    points: [
+      { head: "건의", text: "결과보고서에 ‘연수 초반 현지 적응 오리엔테이션 보강’을 제안했습니다." },
+      { head: "HR 연결", text: "새 환경에 들어온 사람이 무엇을 필요로 하는지 직접 겪은 경험은 온보딩 설계로 이어집니다." }
+    ],
+    gallery: pages("canada", [3, 4, 5]),
+    files: [{ label: "연수 결과보고서", href: doc("canada"), note: "연락처만 가렸습니다" }]
   },
 
   cost: {
