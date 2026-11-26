@@ -399,3 +399,11 @@ h3 { font-size: 22px; line-height: 1.4; letter-spacing: -0.03em; }
   .navLinks { min-width: 0; }
   .navName { flex-shrink: 0; }
 }
+
+/* 일경험 시연 영상 */
+.programVideo { grid-column: 1 / -1; margin: 0; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 32px; align-items: end; padding-top: 32px; border-top: 1px solid var(--line); }
+.programVideo video { display: block; width: 100%; aspect-ratio: 16 / 9; border-radius: 20px; background: var(--dark); box-shadow: var(--shadow); }
+.programVideo figcaption { display: flex; flex-direction: column; gap: 8px; padding-bottom: 6px; }
+.programVideo strong { font-size: 17px; }
+.programVideo span { font-size: 15px; color: var(--muted); }
+@media (max-width: 1024px) { .programVideo { grid-template-columns: 1fr; gap: 16px; } }

@@ -564,6 +564,15 @@ export default function App() {
               <img src="/idbeauty-story.jpg" alt="첫 방문 상담부터 다음 방문까지 고객 기록이 이어지는 과정을 7단계로 정리한 인포그래픽 (가상 인물, AI 생성 이미지)" loading="lazy" decoding="async" />
               <span>고객 여정 인포그래픽 보기</span>
             </a>
+            <figure className="programVideo">
+              <video controls preload="none" playsInline poster="/idbeauty-demo-poster.jpg">
+                <source src="/idbeauty-demo.mp4" type="video/mp4" />
+              </video>
+              <figcaption>
+                <strong>최종 시연 영상 · 42초</strong>
+                <span>사전 카르테 작성부터 상담, 시술, 사후 관리까지 손님이 겪는 흐름을 영상으로 보여 줍니다. 제안 서비스를 쓰는 모습을 가상 시나리오로 연출했습니다.</span>
+              </figcaption>
+            </figure>
           </article>
 
           <div className="ylc">
