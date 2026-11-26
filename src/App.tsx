@@ -23,7 +23,7 @@ const competencies = [
     title: "학습·성장 설계",
     hr: "교육 프로그램 기획 (HRD)",
     text: "10주 학습계획과 자료를 직접 만들고, 팀원이 막히는 지점에 맞춰 조정했습니다.",
-    proof: ["디딤돌그룹 리더·튜터 · 우수팀", "그린 하우스 팀장 · 경력성장 체계 설계"]
+    proof: ["디딤돌그룹 리더·튜터 · 우수팀", "그린 하우스 팀장 · 유사 조직 벤치마킹"]
   },
   {
     no: "03",
@@ -335,15 +335,49 @@ export default function App() {
                   5.6점이었습니다. 취업 여부만으로는 근속과 직장 적응을 알 수 없다고 보고, 청년을 직접 고용하는
                   사회적기업 브라더스키퍼를 사례로 ‘취업 이후의 성장’을 지원하는 방법을 찾았습니다.
                 </p>
-                <dl className="projectFacts">
-                  <div><dt>조사</dt><dd>52쪽 자료조사 보고서 · PESTEL · 조직운영·인사·교육 현황 · 조직문화 이론</dd></div>
-                  <div><dt>제안</dt><dd>30쪽 발표자료 · 인포그래픽 · 12개월 시범운영 로드맵 · KPI 7개</dd></div>
+<dl className="projectFacts">
+                  <div><dt>내 역할</dt><dd><b>팀장</b> · 유사 조직 비교와 핵심 성공요인 조사 (소이프 · 열여덟 어른 벤치마킹)</dd></div>
+                  <div><dt>산출물</dt><dd>52쪽 통합 자료조사 보고서 · 30장 최종 제출물 · 인포그래픽 · 학기말 발표</dd></div>
                 </dl>
               </div>
               <a className="projectImg reveal" style={d(1)} href="/greenhouse-infographic.jpg" target="_blank" rel="noreferrer">
                 <img src="/greenhouse-infographic.jpg" alt="브라더스키퍼 지속가능성 향상 방안 인포그래픽" loading="lazy" decoding="async" />
                 <span>인포그래픽 크게 보기</span>
               </a>
+            </div>
+
+            <ol className="process reveal" aria-label="진행 과정">
+              {[
+                ["공모전 분석", "주최 측 의도와 심사기준 6개를 읽고, 2025년 대상작을 분석"],
+                ["분담 조사", "5명이 5개 영역을 나눠 조사하고 통합 보고서로 정리"],
+                ["과제 선정", "개선과제 5개를 근거·영향·실행 가능성 등 5개 기준으로 평가"],
+                ["전략 도출", "핵심 과제를 3대 전략과 12개월 시범운영안으로 구체화"]
+              ].map(([t, x], i) => (
+                <li key={t}>
+                  <span className="num">{String(i + 1).padStart(2, "0")}</span>
+                  <strong>{t}</strong>
+                  <p>{x}</p>
+                </li>
+              ))}
+            </ol>
+
+            <div className="myPart reveal">
+              <p className="kind">내가 맡은 조사가 전략이 되기까지</p>
+              <div className="myPartGrid">
+                <div>
+                  <h3>비슷한 조직은 청년을 어떻게 키우는가</h3>
+                  <p>
+                    자립준비청년을 직원으로 고용하는 브라더스키퍼, 디자이너로 참여시키는 소이프, 캠페이너로 참여시키는
+                    ‘열여덟 어른’을 비교했습니다. 세 조직 모두 청년을 도움만 받는 사람으로 보지 않는다는 공통점과,
+                    조직마다 키워 주는 역량이 다르다는 차이를 정리했습니다.
+                  </p>
+                </div>
+                <ul>
+                  <li><strong>교육 결과를 눈에 보이게 남기기</strong><span>소이프 → 전략 1 경력기록서</span></li>
+                  <li><strong>청년 의견을 정기적으로 듣는 절차</strong><span>열여덟 어른 → 전략 3 Youth Voice</span></li>
+                  <li><strong>장기 성과를 외부에 공개하기</strong><span>열여덟 어른 → 근속·경력 이동 지표 제안</span></li>
+                </ul>
+              </div>
             </div>
 
             <ol className="strategies">

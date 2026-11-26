@@ -187,7 +187,7 @@ h3 { font-size: 22px; line-height: 1.4; letter-spacing: -0.03em; }
 .projectIntro h3 { margin-top: 8px; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.35; }
 .projectIntro > p:not(.kind) { margin-top: 16px; color: var(--ink-2); line-height: 1.85; }
 .projectFacts { margin: 28px 0 0; border-top: 1px solid var(--line); }
-.projectFacts div { display: grid; grid-template-columns: 56px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.projectFacts div { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
 .projectFacts dt { color: var(--accent); font-weight: 600; }
 .projectFacts dd { margin: 0; color: var(--ink-2); }
 .projectImg { display: block; padding: 6px; border-radius: 26px; background: rgba(29, 28, 26, 0.05); position: relative; transition: transform 0.6s var(--ease); }
@@ -208,6 +208,21 @@ h3 { font-size: 22px; line-height: 1.4; letter-spacing: -0.03em; }
 .strategy:first-child em { color: #fff; }
 .projectNote { margin-top: 28px; padding: 20px 24px; border-left: 2px solid var(--accent); color: var(--ink-2); font-weight: 500; line-height: 1.8; max-width: 52em; }
 .caseMeta img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 14px; margin-bottom: 14px; }
+
+.projectFacts b { color: var(--ink); }
+.process { margin-top: 48px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--ink); }
+.process li { padding: 20px 20px 0 0; }
+.process li + li { padding-left: 20px; border-left: 1px solid var(--line); }
+.process .num { font-size: 14px; color: var(--accent); }
+.process strong { display: block; margin-top: 6px; font-size: 18px; }
+.process p { margin-top: 6px; font-size: 15px; color: var(--muted); line-height: 1.7; }
+.myPart { margin-top: 40px; padding: 32px; border-radius: 26px; background: var(--surface); box-shadow: inset 0 0 0 1px rgba(29, 28, 26, 0.06), var(--shadow); }
+.myPartGrid { margin-top: 10px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 36px; align-items: start; }
+.myPartGrid p { margin-top: 12px; color: var(--muted); line-height: 1.85; }
+.myPartGrid ul { display: grid; gap: 8px; }
+.myPartGrid li { padding: 14px 16px; border-radius: 14px; background: var(--bg); display: flex; flex-direction: column; gap: 2px; }
+.myPartGrid li strong { font-weight: 600; }
+.myPartGrid li span { font-size: 14px; color: var(--accent); }
 
 /* 학업 */
 .study { margin-left: 260px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
@@ -286,6 +301,10 @@ h3 { font-size: 22px; line-height: 1.4; letter-spacing: -0.03em; }
   .leadBadge strong { font-size: 32px; }
   .case { grid-template-columns: 1fr; }
   .project { grid-template-columns: 1fr; }
+  .process { grid-template-columns: 1fr 1fr; }
+  .process li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .myPart { padding: 24px; }
+  .myPartGrid { grid-template-columns: 1fr; gap: 20px; }
   .projectImg { max-width: 420px; }
   .strategies { grid-template-columns: 1fr; }
   .strategy:first-child { border-radius: 24px 24px 6px 6px; }
