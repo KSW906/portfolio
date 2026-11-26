@@ -191,8 +191,11 @@ export const details: Record<string, Detail> = {
       { head: "담은 활동", text: "SET-UP 프로그램, 디딤돌 그룹, 화상영어, 여행 중국어, HSK 5급 공부, 초등 영어캠프, 영어 과외" },
       { head: "성찰", text: "역량마다 점수를 매기고 느낀 점과 앞으로의 계획을 적었습니다." }
     ],
-    gallery: pages("smileage2024", [2, 4, 6, 7]),
-    files: [{ label: "포트폴리오 요약본", href: doc("smileage2024") }]
+    gallery: pages("smileage2024full", [14, 21, 31, 45, 52, 56]),
+    files: [
+      { label: "포트폴리오 전체본", href: doc("smileage2024-full") },
+      { label: "포트폴리오 요약본", href: doc("smileage2024") }
+    ]
   },
 
   cleveron: {
