@@ -1,4 +1,5 @@
-import { useEffect, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { details } from "./details";
 
 const d = (i: number) => ({ "--i": i } as CSSProperties);
 
@@ -67,6 +68,7 @@ type Case = {
   link: string;
   photo?: string;
   photoAlt?: string;
+  detail?: string;
 };
 
 const cases: Case[] = [
@@ -104,6 +106,7 @@ const cases: Case[] = [
     year: "2026",
     tag: "스토리텔링 · 직무 연결",
     title: "HUMAN LINK 외국어 포트폴리오",
+    detail: "humanlink",
     period: "2026",
     situation: "3년 동안의 외국어 경험이 시기별로 흩어져 있어 하나의 방향으로 보이지 않았습니다.",
     action: "나 → 너 → 세계 → 일 → 다음의 흐름으로 경험을 다시 엮어, HRD 진로와 하나의 이야기로 연결했습니다.",
@@ -194,6 +197,7 @@ const years = [
 const ylc = [
   {
     when: "1차 Y.E.S",
+    id: "debate",
     name: "YLC 경제 세미나(Y.E.S) 토론",
     team: "‘ONEWAY조’ · 4인",
     topic: "상속세 부담 완화, 반대측",
@@ -202,6 +206,7 @@ const ylc = [
   },
   {
     when: "2026.9",
+    id: "startup",
     name: "청년창업프로젝트",
     team: "전국 9조 ‘소상공인구조대’ · 3인",
     topic: "무인매장 도난 대응 서비스 ‘지킴박스’ 사업계획",
@@ -210,6 +215,7 @@ const ylc = [
   },
   {
     when: "2026.9 – 10",
+    id: "marketing",
     name: "48대 SKILL-UP 마케팅대회",
     team: "10조 · 4인",
     topic: "삼양식품 진단과 ‘BULDAK KIT’ 신제품 제안",
@@ -218,6 +224,7 @@ const ylc = [
   },
   {
     when: "2026.10",
+    id: "research",
     name: "RESEARCH COMPETITION 2026",
     team: "10조 · 3인",
     topic: "LS ELECTRIC 기업 분석 리서치 보고서",
@@ -226,6 +233,7 @@ const ylc = [
   },
   {
     when: "2026.10 – 11",
+    id: "shipbuilding",
     name: "3·4차 Y.E.S 조선산업 분석",
     team: "충청전라지부 ‘항해일지조’ · 6인",
     topic: "삼성중공업 중심 조선업 분석 (PEST · 5 Forces · 전략 제언)",
@@ -233,6 +241,13 @@ const ylc = [
     hr: "다인원 협업"
   }
 ];
+
+const awardDetail: Record<string, string> = {
+  "2026 SMILEAGE 외국어 포트폴리오 경진대회 (HUMAN LINK)": "humanlink",
+  "2026 CLEVER:ON 교수·학습 우수사례 공모전 수기분야": "cleveron",
+  "제2회 SMILEAGE 외국어 포트폴리오 경진대회": "smileage"
+};
+const courseDetail: Record<string, string> = { "원가회계 (2026-1)": "cost" };
 
 const awards = [
   ["2026", "동상", "2026 SMILEAGE 외국어 포트폴리오 경진대회 (HUMAN LINK)"],
@@ -272,6 +287,108 @@ function SectionHead({ label, title, text }: { label: string; title: string; tex
   );
 }
 
+function DetailSheet({ id, onClose }: { id: string | null; onClose: () => void }) {
+  const ref = useRef<HTMLDialogElement>(null);
+  const item = id ? details[id] : null;
+  useEffect(() => {
+    const dlg = ref.current;
+    if (!dlg) return;
+    if (item && !dlg.open) {
+      dlg.showModal();
+      dlg.scrollTop = 0;
+      document.documentElement.classList.add("sheetOpen");
+    }
+    if (!item && dlg.open) dlg.close();
+  }, [item]);
+  return (
+    <dialog
+      ref={ref}
+      className="sheet"
+      aria-labelledby="sheetTitle"
+      onClose={() => {
+        document.documentElement.classList.remove("sheetOpen");
+        onClose();
+      }}
+      onClick={(e) => {
+        if (e.target === e.currentTarget) ref.current?.close();
+      }}
+    >
+      {item && (
+        <div className="sheetInner">
+          <header className="sheetHead">
+            <p className="kind">{item.kicker}</p>
+            <h2 id="sheetTitle">{item.title}</h2>
+            <button className="sheetClose" onClick={() => ref.current?.close()} aria-label="닫기">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </button>
+          </header>
+          <p className="sheetSummary">{item.summary}</p>
+
+          <div className="sheetGrid">
+            <section>
+              <h3>내가 한 일</h3>
+              <ul className="sheetRole">
+                {item.role.map((r) => <li key={r}>{r}</li>)}
+              </ul>
+            </section>
+            {item.points.length > 0 && (
+              <section>
+                <h3>핵심 내용</h3>
+                <dl className="sheetPoints">
+                  {item.points.map((pt) => (
+                    <div key={pt.head}><dt>{pt.head}</dt><dd>{pt.text}</dd></div>
+                  ))}
+                </dl>
+              </section>
+            )}
+          </div>
+
+          {item.video && (
+            <video className="sheetVideo" controls preload="none" playsInline poster={item.video.poster}>
+              <source src={item.video.src} type="video/mp4" />
+            </video>
+          )}
+
+          {item.gallery.length > 0 && (
+            <section className="sheetGallery" aria-label="주요 페이지">
+              <h3>주요 페이지 <small>눌러서 크게 보기</small></h3>
+              <div className="galleryStrip">
+                {item.gallery.map((src, i) => (
+                  <a key={src} href={src} target="_blank" rel="noreferrer">
+                    <img src={src} alt={`${item.title} 주요 페이지 ${i + 1}`} loading="lazy" decoding="async" />
+                  </a>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {item.files.length > 0 ? (
+            <section className="sheetFiles">
+              <h3>원본 자료</h3>
+              <ul>
+                {item.files.map((f) => (
+                  <li key={f.href}>
+                    <a href={f.href} target="_blank" rel="noreferrer">
+                      <span>{f.label}</span>
+                      <em>PDF</em>
+                      <Arrow />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="sheetNote">팀원 이름, 학번, 연락처, 다른 사람의 얼굴이 나온 페이지는 공개본에서 뺐습니다.</p>
+            </section>
+          ) : (
+            <p className="sheetNote">이 활동의 원본 자료는 한글(HWP) 파일이라 요약만 실었습니다.</p>
+          )}
+        </div>
+      )}
+    </dialog>
+  );
+}
+
 export default function App() {
   useEffect(() => {
     const els = document.querySelectorAll<HTMLElement>(".reveal");
@@ -292,6 +409,13 @@ export default function App() {
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
+
+  const [open, setOpen] = useState<string | null>(null);
+  const More = ({ id, label = "자세히 보기" }: { id: string; label?: string }) => (
+    <button type="button" className="more" onClick={() => setOpen(id)}>
+      {label} <span className="moreIcon"><Arrow /></span>
+    </button>
+  );
 
   return (
     <>
@@ -408,6 +532,7 @@ export default function App() {
                   <div><dt>내 역할</dt><dd><b>팀장</b> · 유사 조직 비교와 핵심 성공요인 조사 (소이프 · 열여덟 어른 벤치마킹)</dd></div>
                   <div><dt>산출물</dt><dd>52쪽 통합 자료조사 보고서 · 30장 경진대회 제출물(본선 진출) · 인포그래픽 · 조직이론 학기말 발표</dd></div>
                 </dl>
+                <More id="greenhouse" label="보고서와 발표 자료 보기" />
               </div>
               <a className="projectImg reveal" style={d(1)} href="/greenhouse-infographic.jpg" target="_blank" rel="noreferrer">
                 <img src="/greenhouse-infographic.jpg" alt="브라더스키퍼 지속가능성 향상 방안 인포그래픽" loading="lazy" decoding="async" />
@@ -493,6 +618,7 @@ export default function App() {
                 <li>성찰</li>
                 <li>성과 정리</li>
               </ul>
+              <More id="smileage" label="포트폴리오 보기" />
             </div>
           </article>
         </section>
@@ -525,6 +651,7 @@ export default function App() {
                       <span>HR 연결</span>
                       {c.link}
                     </p>
+                    {c.detail && <More id={c.detail} label="포트폴리오 보기" />}
                   </div>
                 </article>
               ))}
@@ -559,6 +686,7 @@ export default function App() {
                 팀원마다 다르던 의견을 ‘누가 기록하나, 언제 확인하나, 어떤 업무에 쓰나’라는 기준으로 모았습니다.
                 현장 직원이 실제로 쓸 수 있는 제도를 만드는 일은 인사 제도 설계와 같습니다.
               </p>
+              <More id="work" label="PPT와 보고서 보기" />
             </div>
             <a className="programImg" href="/idbeauty-story.jpg" target="_blank" rel="noreferrer">
               <img src="/idbeauty-story.jpg" alt="첫 방문 상담부터 다음 방문까지 고객 기록이 이어지는 과정을 7단계로 정리한 인포그래픽 (가상 인물, AI 생성 이미지)" loading="lazy" decoding="async" />
@@ -591,6 +719,7 @@ export default function App() {
                   <div className="ylcWork">
                     <p className="ylcTopic">{a.topic}</p>
                     <p>{a.mine}</p>
+                    <More id={a.id} />
                   </div>
                   <em>{a.hr}</em>
                 </li>
@@ -624,6 +753,7 @@ export default function App() {
                     <li key={course}>
                       <strong>{course}</strong>
                       <span>{work}</span>
+                      {courseDetail[course] && <More id={courseDetail[course]} label="보고서 보기" />}
                     </li>
                   ))}
                 </ul>
@@ -666,7 +796,13 @@ export default function App() {
               {awards.map(([date, result, title], i) => (
                 <li key={title} className="reveal" style={d(i % 3)}>
                   <time className="num">{date}</time>
-                  <p>{title}</p>
+                  {awardDetail[title] ? (
+                    <button type="button" className="awardLink" onClick={() => setOpen(awardDetail[title])}>
+                      {title} <span className="moreIcon"><Arrow /></span>
+                    </button>
+                  ) : (
+                    <p>{title}</p>
+                  )}
                   <strong className={result === "대상" ? "top" : ""}>{result}</strong>
                 </li>
               ))}
@@ -707,6 +843,8 @@ export default function App() {
           </div>
         </section>
       </main>
+
+      <DetailSheet id={open} onClose={() => setOpen(null)} />
 
       <footer className="footer">
         <span>김희연 · 선문대학교 경영학과 · HR 인사담당 지망</span>
