@@ -258,15 +258,17 @@ const acts: Act[] = [
   { cat: "공모전 · 수상", at: "2026.09", when: "2026", title: "CLEVER:ON 교수·학습 우수사례 공모전", role: "수기분야", text: "PetMart 웹 서비스를 만들며 익힌 THINK → ASK → CHECK → REBUILD 학습법을 수기로 정리했습니다.", result: "장려상 · 혁신원장상", detail: "cleveron" },
   { cat: "공모전 · 수상", at: "2025.10", when: "2025.10", title: "도전! 선문 독서왕 서평쓰기 대회", role: "서평쓰기", text: "", result: "장려상" },
   { cat: "공모전 · 수상", at: "2024.11.3", when: "2024.11", title: "제2회 SMILEAGE 외국어 포트폴리오 경진대회", role: "개인", text: "1년 동안의 외국어 학습을 목표·과정·성과·성찰로 정리했습니다.", result: "대상", detail: "smileage", flag: "#work-3" },
-  { cat: "공모전 · 수상", at: "2024.11.2", when: "2024.11", title: "도전장학 스토리캐스팅", role: "도전장학", text: "", result: "최우수상" },
-  { cat: "공모전 · 수상", at: "2024.11.1", when: "2024.11", title: "학습법 관련 우수사례 공모전", role: "학습법 우수사례", text: "", result: "장려상" }
+  { cat: "공모전 · 수상", at: "2024.11.2", when: "2024.11", title: "도전장학 스토리캐스팅 ‘내 인생의 커리어 컨설턴트’", role: "실천계획서 · 점검표 · 발표", text: "1학년 한 해의 목표를 세우고 학기마다 달성률을 점검해 발표했습니다.", result: "최우수상", detail: "storycasting" },
+  { cat: "공모전 · 수상", at: "2024.11.1", when: "2024.11", title: "학습법 관련 우수사례 공모전 ‘야! 너도 할 수 있어’", role: "학습성과 우수사례", text: "처음 배우는 과목마다 공부 방법을 바꿔 1학년 1학기 평점 4.33을 받은 과정을 정리했습니다.", result: "장려상", detail: "learnmethod" }
 ];
 const sortedActs = [...acts].sort((x, y) => (x.at < y.at ? 1 : -1));
 
 const awardDetail: Record<string, string> = {
   "2026 SMILEAGE 외국어 포트폴리오 경진대회 (HUMAN LINK)": "humanlink",
   "2026 CLEVER:ON 교수·학습 우수사례 공모전 수기분야": "cleveron",
-  "제2회 SMILEAGE 외국어 포트폴리오 경진대회": "smileage"
+  "제2회 SMILEAGE 외국어 포트폴리오 경진대회": "smileage",
+  "도전장학 스토리캐스팅": "storycasting",
+  "학습법 관련 우수사례 공모전": "learnmethod"
 };
 const courseDetail: Record<string, string> = { "원가회계 (2026-1)": "cost" };
 
