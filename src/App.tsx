@@ -16,21 +16,21 @@ const competencies = [
     title: "경청과 코칭",
     hr: "구성원 면담 · 온보딩",
     text: "멘티의 수준과 목표를 먼저 듣고, 그에 맞춰 지도 방식을 바꿔 왔습니다.",
-    proof: ["늘벗 공부방 7개월 멘토링", "SMILEAGE 장기 멘토링"]
+    proof: ["늘벗 공부방 7개월 멘토링", "SMILEAGE 장기 멘토링", "Youth Voice 의견수렴 절차 제안"]
   },
   {
     no: "02",
     title: "학습·성장 설계",
     hr: "교육 프로그램 기획 (HRD)",
     text: "10주 학습계획과 자료를 직접 만들고, 팀원이 막히는 지점에 맞춰 조정했습니다.",
-    proof: ["디딤돌그룹 리더·튜터 · 우수팀"]
+    proof: ["디딤돌그룹 리더·튜터 · 우수팀", "Gardener Growth Path 설계"]
   },
   {
     no: "03",
     title: "조직과 사람에 대한 이해",
     hr: "조직문화 · 동기부여",
-    text: "조직행동론에서 사람의 행동과 동기를 이론으로 배우고, 팀 프로젝트로 적용했습니다.",
-    proof: ["조직행동론 팀 프로젝트", "생활예절과 문화 에세이"]
+    text: "조직행동론에서 배운 시각으로, 사회적기업의 조직운영과 인사·교육 현황을 직접 분석했습니다.",
+    proof: ["조직행동론 팀 프로젝트", "브라더스키퍼 조직문화 분석"]
   },
   {
     no: "04",
@@ -43,20 +43,33 @@ const competencies = [
     no: "05",
     title: "다양성 속의 소통",
     hr: "글로벌 인재 · 다양성 관리",
-    text: "캐나다에서 다양한 문화의 사람들과 지내며 영어를 소통의 도구로 썼습니다.",
-    proof: ["FLY TRACK 1 · 캐나다 3주"]
+    text: "캐나다에서 매시간 다른 국적의 학생들과 조를 짜 토론하고 발표하며, 영어를 소통의 도구로 썼습니다.",
+    proof: ["FLY TRACK 1 · 캐나다 3주", "일본인 룸메이트와 생활"]
   },
   {
     no: "06",
     title: "디지털 도구 활용",
-    hr: "HR 데이터 · 업무 효율화",
-    text: "AI를 개발 보조 도구로 써서 로그인부터 결제까지 사용자 흐름을 구현했습니다.",
-    proof: ["PetMart 웹 서비스", "경영소프트웨어"]
+    hr: "HR 데이터 · 인건비 관리",
+    text: "AI를 개발 보조 도구로 써서 웹 서비스를 만들고, 원가 자료를 표로 정리해 단위당 원가를 계산했습니다.",
+    proof: ["PetMart 웹 서비스", "원가회계 원가구조 분석"]
   }
 ];
 
 /* 핵심 경험: 상황, 역할·행동, 결과, HR 연결 */
-const cases = [
+type Case = {
+  year: string;
+  tag: string;
+  title: string;
+  period: string;
+  situation: string;
+  action: string;
+  result: string;
+  link: string;
+  photo?: string;
+  photoAlt?: string;
+};
+
+const cases: Case[] = [
   {
     year: "2024",
     tag: "학습 설계 · 리더십",
@@ -96,6 +109,18 @@ const cases = [
     action: "나 → 너 → 세계 → 일 → 다음의 흐름으로 경험을 다시 엮어, HRD 진로와 하나의 이야기로 연결했습니다.",
     result: "1차 합격",
     link: "경험을 직무 역량의 언어로 바꾸는 일은 채용과 인재 평가의 핵심입니다."
+  },
+  {
+    year: "2026",
+    tag: "글로벌 소통 · 적응",
+    title: "FLY TRACK 1 캐나다 캘거리 연수",
+    period: "2026.7.2 ~ 7.25 · 3주",
+    photo: "/canada-class.jpg",
+    photoAlt: "Mount Royal University 여름 영어 프로그램 수업 자리의 이름표와 필기 노트",
+    situation: "낯선 나라에서 3주 동안 생활하며, 다양한 국적의 학생들과 영어로 수업을 들어야 했습니다.",
+    action: "매시간 새로 짜인 다국적 조에서 토론하고 발표했고, 밴프 체험 뒤에는 고른 사진과 이유를 영어로 발표했습니다. 일본인 룸메이트와 함께 생활하며 서로의 문화를 나눴습니다.",
+    result: "연수 후에도 이어지는 관계, 결과보고서에 ‘연수 초반 현지 적응 오리엔테이션 보강’을 건의",
+    link: "새 환경에 들어온 사람이 무엇을 필요로 하는지 직접 겪은 경험은 온보딩 설계로 이어집니다."
   }
 ];
 
@@ -105,12 +130,14 @@ const courses = [
     group: "조직 · 인사",
     items: [
       ["조직행동론", "트럼프 관세정책 팀 프로젝트"],
+      ["사회적기업 경진대회 (2026)", "브라더스키퍼 조직운영·인사·교육 현황 분석"],
       ["생활예절과 문화", "관계와 존중 에세이"]
     ]
   },
   {
     group: "경영 · 경제",
     items: [
+      ["원가회계 (2026-1)", "무인 포토부스 원가구조 분석과 수익성 향상 전략 · 2인 팀"],
       ["경영소프트웨어", "2025년 한국 경제 전망"],
       ["경제학원론", "자유무역 vs 보호무역"],
       ["영어로 공부하는 아시아 경제의 이슈", "일본 문화·관광 분석"]
@@ -145,8 +172,8 @@ const years = [
     y: "2026",
     step: "3학년 · 정의",
     head: "HR이라는 방향을 분명히 한 해",
-    text: "멘토링을 이어가며 해외 연수, 팀 프로젝트, AI 웹 프로젝트까지 경험하고 HR 인사담당이라는 목표를 구체화했습니다.",
-    extra: ["HUMAN LINK 1차 합격", "캐나다 캘거리 연수", "ESG 공모 ‘이음’ 팀장", "PetMart 웹 서비스"]
+    text: "멘토링을 이어가며 해외 연수와 팀 프로젝트를 경험했고, 사회적기업의 인사·교육 제도를 직접 설계해 보며 HR 인사담당이라는 목표를 구체화했습니다.",
+    extra: ["원가회계 원가구조 분석 (1학기)", "캐나다 캘거리 연수 (7월)", "사회적기업 경진대회 ‘그린 하우스’", "HUMAN LINK 1차 합격", "ESG 공모 ‘이음’ 팀장", "PetMart 웹 서비스"]
   }
 ];
 
@@ -206,6 +233,7 @@ export default function App() {
         <a href="#top" className="navName">김희연</a>
         <div className="navLinks">
           <a href="#skills">역량</a>
+          <a href="#project">프로젝트</a>
           <a href="#cases">경험</a>
           <a href="#study">학업</a>
           <a href="#growth">성장</a>
@@ -289,8 +317,60 @@ export default function App() {
           </div>
         </section>
 
+        {/* 대표 프로젝트: 사회적기업 경진대회 */}
+        <section className="block tinted" id="project">
+          <div className="blockInner">
+            <SectionHead
+              label="대표 프로젝트"
+              title="자립준비청년이 일터에서 오래 성장하도록, 인사 제도를 설계했습니다"
+              text="2026 제2회 전국 대학생 사회적기업 우수사례발굴 경진대회 · 유형 A(지속가능성 향상 방안) · 5인 팀 ‘그린 하우스’"
+            />
+
+            <div className="project">
+              <div className="projectIntro reveal">
+                <p className="kind">문제 정의</p>
+                <h3>취업률은 올랐지만, 자립은 안정됐을까?</h3>
+                <p>
+                  자립준비청년 취업자 비율은 2020년 42.2%에서 2023년 52.4%로 올랐지만, 삶의 만족도는 10점 중
+                  5.6점이었습니다. 취업 여부만으로는 근속과 직장 적응을 알 수 없다고 보고, 청년을 직접 고용하는
+                  사회적기업 브라더스키퍼를 사례로 ‘취업 이후의 성장’을 지원하는 방법을 찾았습니다.
+                </p>
+                <dl className="projectFacts">
+                  <div><dt>조사</dt><dd>52쪽 자료조사 보고서 · PESTEL · 조직운영·인사·교육 현황 · 조직문화 이론</dd></div>
+                  <div><dt>제안</dt><dd>30쪽 발표자료 · 인포그래픽 · 12개월 시범운영 로드맵 · KPI 7개</dd></div>
+                </dl>
+              </div>
+              <a className="projectImg reveal" style={d(1)} href="/greenhouse-infographic.jpg" target="_blank" rel="noreferrer">
+                <img src="/greenhouse-infographic.jpg" alt="브라더스키퍼 지속가능성 향상 방안 인포그래픽" loading="lazy" decoding="async" />
+                <span>인포그래픽 크게 보기</span>
+              </a>
+            </div>
+
+            <ol className="strategies">
+              {[
+                ["Gardener Growth Path", "청년 경력성장 체계", "L1 기초·현장 보조부터 L4 전문직무 확대까지 직무 단계를 나누고, 같은 평가표로 관리자와 본인이 함께 기록합니다. 분기마다 피드백하고, 본인이 동의하면 경력기록서를 발급해 이직·승진 증빙으로 씁니다.", "직무 체계 · 역량 평가 · 경력 개발"],
+                ["Impact-Link Contract", "계약별 성과관리", "서비스 이행률·재계약·공헌이익 같은 계약 성과와 청년의 역량 변화를 한 화면에서 따로 기록하고, 분기마다 함께 검토합니다. 고객사에는 개인 정보 없이 집계만 공유합니다.", "성과 관리 · 개인정보 보호"],
+                ["Youth Voice", "청년 참여 운영체계", "익명 설문과 정기 간담회로 의견을 받고, 제안마다 검토자를 정해 반영 여부와 이유를 기록한 뒤 결과를 공유합니다. 안전 관련 의견은 비공개로 분류합니다.", "구성원 의견 수렴 · 조직문화"]
+              ].map(([en, ko, text, hr], i) => (
+                <li key={en} className="strategy reveal" style={d(i)}>
+                  <span className="num">전략 {i + 1}</span>
+                  <h3>{ko}</h3>
+                  <small>{en}</small>
+                  <p>{text}</p>
+                  <em>{hr}</em>
+                </li>
+              ))}
+            </ol>
+
+            <p className="projectNote reveal">
+              확대·수정·중단 판단 기준에 ‘청년의 업무부담·안전·자율 동의’를 넣어, 성과가 좋아도 구성원 보호가
+              훼손되면 멈추도록 설계했습니다. 사람을 먼저 지키는 제도가 오래 간다고 생각했기 때문입니다.
+            </p>
+          </div>
+        </section>
+
         {/* 대표 성과: 단일 스포트라이트 */}
-        <section className="block tight" aria-label="대표 성과">
+        <section className="block" aria-label="대표 성과">
           <article className="spotlight reveal">
             <div className="leadBadge">
               <span>SMILEAGE 경진대회</span>
@@ -319,13 +399,14 @@ export default function App() {
           <div className="blockInner">
             <SectionHead
               label="핵심 경험"
-              title="상황, 행동, 결과로 정리한 네 가지 경험"
+              title="상황, 행동, 결과로 정리한 다섯 가지 경험"
               text="경험마다 마지막 줄에 HR 업무와 어떻게 이어지는지 적었습니다."
             />
             <div className="cases">
               {cases.map((c) => (
                 <article className="case reveal" key={c.title}>
                   <div className="caseMeta">
+                    {c.photo && <img src={c.photo} alt={c.photoAlt} loading="lazy" decoding="async" />}
                     <span className="num">{c.year}</span>
                     <h3>{c.title}</h3>
                     <p>{c.tag}</p>
