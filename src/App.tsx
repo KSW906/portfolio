@@ -1,3 +1,5 @@
+import ChatWidget from "./ChatWidget";
+
 const archive2024 = [
   "경영소프트웨어 · 2025년 한국 경제 전망",
   "경제학원론 · 자유무역 vs 보호무역",
@@ -235,6 +237,7 @@ export default function App(){
         </div>
         <a href="#top">BACK TO TOP ↑</a>
       </footer>
+      <ChatWidget />
     </main>
   );
 }
