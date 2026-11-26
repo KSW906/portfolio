@@ -1,6 +1,6 @@
 /* 항목별 상세 보기 데이터
    - 이미지와 PDF는 public/docs에 있습니다.
-   - 팀원 이름, 학번, 연락처, 다른 사람 얼굴이 나온 페이지는 PDF에서 뺐습니다. */
+   - 사용자 요청으로 원본 자료를 페이지 삭제 없이 그대로 싣습니다 (용량만 줄임). */
 
 export type DocFile = { label: string; href: string; note?: string };
 export type Detail = {

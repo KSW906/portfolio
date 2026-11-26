@@ -378,7 +378,7 @@ function DetailSheet({ id, onClose }: { id: string | null; onClose: () => void }
                   </li>
                 ))}
               </ul>
-              <p className="sheetNote">팀원 이름, 학번, 연락처, 다른 사람의 얼굴이 나온 페이지는 공개본에서 뺐습니다.</p>
+              <p className="sheetNote">원본 그대로 실었습니다. 용량이 큰 파일은 화질만 조금 낮췄습니다.</p>
             </section>
           ) : (
             <p className="sheetNote">이 활동의 원본 자료는 한글(HWP) 파일이라 요약만 실었습니다.</p>
