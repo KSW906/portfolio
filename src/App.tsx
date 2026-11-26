@@ -3,7 +3,7 @@ import { useEffect, type CSSProperties } from "react";
 const d = (i: number) => ({ "--i": i } as CSSProperties);
 
 const metrics = [
-  ["4", "회", "교내 공모전 수상", "대상 · 최우수상 포함"],
+  ["6", "회", "교내 공모전 수상", "대상 · 최우수상 포함"],
   ["7", "개월", "중학생 영어 멘토링", "늘벗 공부방"],
   ["10", "주", "스터디 리더·튜터", "디딤돌그룹 우수팀"],
   ["3", "주", "캐나다 캘거리 연수", "FLY TRACK 1"]
@@ -16,14 +16,14 @@ const competencies = [
     title: "경청과 코칭",
     hr: "구성원 면담 · 온보딩",
     text: "멘티의 수준과 목표를 먼저 듣고, 그에 맞춰 지도 방식을 바꿔 왔습니다.",
-    proof: ["늘벗 공부방 7개월 멘토링", "SMILEAGE 장기 멘토링", "Youth Voice 의견수렴 절차 제안"]
+    proof: ["늘벗 공부방 7개월 멘토링", "SMILEAGE 장기 멘토링", "다문화 멘토링 장학 (2026)", "Youth Voice 의견수렴 절차 제안"]
   },
   {
     no: "02",
     title: "학습·성장 설계",
     hr: "교육 프로그램 기획 (HRD)",
     text: "10주 학습계획과 자료를 직접 만들고, 팀원이 막히는 지점에 맞춰 조정했습니다.",
-    proof: ["디딤돌그룹 리더·튜터 · 우수팀", "그린 하우스 팀장 · 유사 조직 벤치마킹"]
+    proof: ["디딤돌그룹 리더·튜터 · 우수팀", "그린 하우스 팀장 · 유사 조직 벤치마킹", "CLEVER:ON 수기 · 4단계 학습법 정리"]
   },
   {
     no: "03",
@@ -36,8 +36,8 @@ const competencies = [
     no: "04",
     title: "기록과 문서화",
     hr: "인사 기록 · 성과 정리",
-    text: "1년간의 학습을 목표·과정·성과·성찰로 정리해 대상을 받았습니다.",
-    proof: ["SMILEAGE 포트폴리오 대상", "HUMAN LINK 1차 합격"]
+    text: "학습과 경험을 목표·과정·성과·성찰로 정리해, 1학년에 대상, 3학년에 동상을 받았습니다.",
+    proof: ["SMILEAGE 포트폴리오 대상 (2024)", "HUMAN LINK 동상 (2026)", "팀 조사 자료 통합 보고서"]
   },
   {
     no: "05",
@@ -50,8 +50,8 @@ const competencies = [
     no: "06",
     title: "디지털 도구 활용",
     hr: "HR 데이터 · 인건비 관리",
-    text: "AI를 개발 보조 도구로 써서 웹 서비스를 만들고, 원가 자료를 표로 정리해 단위당 원가를 계산했습니다.",
-    proof: ["PetMart 웹 서비스", "원가회계 원가구조 분석"]
+    text: "AI를 개발 보조 도구로 써서 웹 서비스와 CRM 시연 웹앱을 만들고, 그 과정을 학습법으로 정리해 상을 받았습니다.",
+    proof: ["PetMart 웹 서비스", "직원용 CRM 시연 웹앱", "CLEVER:ON 장려상"]
   }
 ];
 
@@ -107,7 +107,7 @@ const cases: Case[] = [
     period: "2026",
     situation: "3년 동안의 외국어 경험이 시기별로 흩어져 있어 하나의 방향으로 보이지 않았습니다.",
     action: "나 → 너 → 세계 → 일 → 다음의 흐름으로 경험을 다시 엮어, HRD 진로와 하나의 이야기로 연결했습니다.",
-    result: "1차 합격",
+    result: "2026 SMILEAGE 외국어 포트폴리오 경진대회 동상 (1학년 대상에 이어 두 번째 수상)",
     link: "경험을 직무 역량의 언어로 바꾸는 일은 채용과 인재 평가의 핵심입니다."
   },
   {
@@ -129,28 +129,41 @@ const courses = [
   {
     group: "조직 · 인사",
     items: [
-      ["조직행동론", "트럼프 관세정책 팀 프로젝트"],
+      ["조직행동론 (2025-1)", "트럼프 관세정책 팀 프로젝트"],
       ["조직이론 (2026-2)", "사회적기업 브라더스키퍼 조직운영·인사 분석 · 경진대회 본선 진출 · 팀장"],
-      ["생활예절과 문화", "관계와 존중 에세이"]
+      ["심리학 START (2025-1)", "충남대 이러닝 학점교류 · 사람의 마음과 행동에 대한 기초"],
+      ["생활예절과 문화 (2025-2)", "관계와 존중 에세이"]
     ]
   },
   {
-    group: "경영 · 경제",
+    group: "경영 · 데이터",
     items: [
+      ["데이터분석과시각화 (2025-2)", "정보화 필수 · 자료를 정리하고 그래프로 읽는 기초"],
+      ["마케팅관리 (2025-1)", "전공선택"],
+      ["재무관리 (2025-2)", "전공선택"],
+      ["생산운영관리 (2026-1)", "전공선택"],
       ["원가회계 (2026-1)", "무인 포토부스 원가구조 분석과 수익성 향상 전략 · 2인 팀"],
-      ["경영소프트웨어", "2025년 한국 경제 전망"],
-      ["경제학원론", "자유무역 vs 보호무역"],
-      ["영어로 공부하는 아시아 경제의 이슈", "일본 문화·관광 분석"]
+      ["글로벌경영학 (2026-1)", "직접 쓴 기사 요약과 AI 답변을 비교하며 학습"]
     ]
   },
   {
-    group: "사고 · 글쓰기",
+    group: "경제 · 사고 · 글쓰기",
     items: [
-      ["읽기와 토론", "기아와 식량 낭비"],
-      ["창의적 사고와 글쓰기", "사회 이슈 기사 분석"],
-      ["아산의 이해와 탐방", "지역문화 탐방"]
+      ["경영소프트웨어응용 (2024-2)", "2025년 한국 경제 전망"],
+      ["경제학원론 (2024-1)", "자유무역 vs 보호무역"],
+      ["영어로 공부하는 아시아 경제의 이슈", "일본 문화·관광 분석"],
+      ["읽기와 토론 (2024-1)", "기아와 식량 낭비"],
+      ["창의적 사고와 글쓰기 (2024-2)", "사회 이슈 기사 분석"],
+      ["아산의 이해와 탐방 (2025-1)", "지역문화 탐방"]
     ]
   }
+];
+
+/* 성적: 성적표 화면 기준 (과목별 성적은 공개하지 않음) */
+const grades = [
+  ["4.33", "/ 4.5", "전체 평점평균", "6개 학기 · 101학점"],
+  ["2", "/ 82", "전체 학기 석차", "성적증명 기준"],
+  ["4.50", "/ 4.5", "2학년 1·2학기", "두 학기 연속 만점"]
 ];
 
 const years = [
@@ -172,16 +185,71 @@ const years = [
     y: "2026",
     step: "3학년 · 정의",
     head: "HR이라는 방향을 분명히 한 해",
-    text: "멘토링을 이어가며 해외 연수와 팀 프로젝트를 경험했고, 사회적기업의 인사·교육 제도를 직접 설계해 보며 HR 인사담당이라는 목표를 구체화했습니다.",
-    extra: ["원가회계 원가구조 분석 (1학기)", "캐나다 캘거리 연수 (7월)", "조직이론 팀 프로젝트 · 사회적기업 경진대회 본선 진출 (팀장)", "HUMAN LINK 1차 합격", "ESG 공모 ‘이음’ 팀장", "PetMart 웹 서비스"]
+    text: "멘토링을 이어가며 해외 연수와 팀 프로젝트를 경험했고, 사회적기업의 인사·교육 제도를 직접 설계해 보며 HR 인사담당이라는 목표를 구체화했습니다. 2학기에는 YLC와 미래내일 일경험에서 여러 팀을 거치며 협업 경험을 넓혔습니다.",
+    extra: ["원가회계 원가구조 분석 (1학기)", "캐나다 캘거리 연수 (7월)", "조직이론 팀 프로젝트 · 사회적기업 경진대회 본선 진출 (팀장)", "HUMAN LINK 동상", "CLEVER:ON 장려상", "YLC 대외활동 (9월~)", "미래내일 일경험 5조 팀장", "ESG 공모 ‘이음’ 팀장"]
+  }
+];
+
+/* 대외활동: 2026년 2학기 (사실 확인된 내용만, 결과는 사용자 확인 후 추가) */
+const ylc = [
+  {
+    when: "1차 Y.E.S",
+    name: "YLC 경제 세미나(Y.E.S) 토론",
+    team: "‘ONEWAY조’ · 4인",
+    topic: "상속세 부담 완화, 반대측",
+    mine: "3번 토론자로 반론을 맡고 자료조사를 담당, 예상 반론과 교차조사 질문을 팀과 함께 준비",
+    hr: "논리적 설득"
+  },
+  {
+    when: "2026.9",
+    name: "청년창업프로젝트",
+    team: "전국 9조 ‘소상공인구조대’ · 3인",
+    topic: "무인매장 도난 대응 서비스 ‘지킴박스’ 사업계획",
+    mine: "아이디어 보고서(개별 아이디어 6개와 결합안 1개), 1차 사업계획서 초안, 멘토 피드백을 반영한 수정안 작성",
+    hr: "피드백 반영"
+  },
+  {
+    when: "2026.9 – 10",
+    name: "48대 SKILL-UP 마케팅대회",
+    team: "10조 · 4인",
+    topic: "삼양식품 진단과 ‘BULDAK KIT’ 신제품 제안",
+    mine: "삼양식품 기업·브랜드 분석 보고서를 단독으로 작성해 1차 기업진단의 기초 자료로 제공",
+    hr: "자료 기반 진단"
+  },
+  {
+    when: "2026.10",
+    name: "RESEARCH COMPETITION 2026",
+    team: "10조 · 3인",
+    topic: "LS ELECTRIC 기업 분석 리서치 보고서",
+    mine: "A파트 기업·경쟁력 조사 담당: 사업 구조, 고객·지역, 사업별 매출, 수주·생산능력, 강점·위험 정리",
+    hr: "분담과 통합"
+  },
+  {
+    when: "2026.10 – 11",
+    name: "3·4차 Y.E.S 조선산업 분석",
+    team: "충청전라지부 ‘항해일지조’ · 6인",
+    topic: "삼성중공업 중심 조선업 분석 (PEST · 5 Forces · 전략 제언)",
+    mine: "6명이 파트를 나눠 조사한 내용을 51쪽 통합 보고서로 묶고, 산업분석 경쟁 PT와 산업박람회 PT로 발표",
+    hr: "다인원 협업"
   }
 ];
 
 const awards = [
-  ["2024.11.20", "대상", "제2회 SMILEAGE 외국어 포트폴리오 경진대회"],
+  ["2026", "동상", "2026 SMILEAGE 외국어 포트폴리오 경진대회 (HUMAN LINK)"],
+  ["2026", "장려상 · 혁신원장상", "2026 CLEVER:ON 교수·학습 우수사례 공모전 수기분야"],
+  ["2025.10.29", "장려상", "도전! 선문 독서왕 서평쓰기 대회"],
   ["2024.11.22", "최우수상", "도전장학 스토리캐스팅"],
-  ["2024.11.20", "장려상", "학습법 관련 우수사례 공모전"],
-  ["2025.10.29", "장려상", "도전! 선문 독서왕 서평쓰기 대회"]
+  ["2024.11.20", "대상", "제2회 SMILEAGE 외국어 포트폴리오 경진대회"],
+  ["2024.11.20", "장려상", "학습법 관련 우수사례 공모전"]
+];
+
+/* 장학: 장학금 수혜 증명서 기준 (금액·개인정보 제외) */
+const scholarships = [
+  ["2024-2 · 2025-1 · 2025-2", "수석 성적장학금", "3학기 연속"],
+  ["2026", "인문100년 국가장학금", "신규 선발"],
+  ["2025 – 2026", "안양시인재육성재단 장학금", "지자체"],
+  ["2026.4 – 현재", "다문화 멘토링 장학", "멘토 활동"],
+  ["2025.4 – 12", "대학 청소년교육지원 장학", "교육지원 활동"]
 ];
 
 function Arrow() {
@@ -235,9 +303,10 @@ export default function App() {
           <a href="#skills">역량</a>
           <a href="#project">프로젝트</a>
           <a href="#cases">경험</a>
+          <a href="#activities">대외활동</a>
           <a href="#study">학업</a>
           <a href="#growth">성장</a>
-          <a href="#awards">수상</a>
+          <a href="#awards">수상·장학</a>
         </div>
       </nav>
 
@@ -463,13 +532,80 @@ export default function App() {
           </div>
         </section>
 
+        {/* 대외활동: 대표 1건 + YLC 목록 */}
+        <section className="block" id="activities">
+          <SectionHead
+            label="대외활동"
+            title="3학년 2학기, 여러 팀에 들어가 함께 일하는 법을 익혔습니다"
+            text="고용노동부 미래내일 일경험에서는 팀장을, YLC에서는 팀마다 다른 역할을 맡았습니다."
+          />
+
+          <article className="program reveal">
+            <div className="programText">
+              <p className="kind">고용노동부 「미래내일 일경험」 프로젝트형 · 참여기업 아이디뷰티</p>
+              <h3>헤어 매장 손님의 이야기가 다음 방문까지 이어지도록, CRM을 기획했습니다</h3>
+              <p>
+                4주 동안 5조 ‘뷰티 인사이트’의 팀장으로, 헤어뷰티 매장에 맞는 고객관리(CRM) 앱과 데이터 관리 전략을
+                기획했습니다. 국내외 CRM 서비스 9개를 비교하고 매장 점장을 인터뷰해, 사전·사후 카르테와 헤어 카드,
+                사후 상담·케어 흐름을 제안했습니다.
+              </p>
+              <dl className="projectFacts">
+                <div><dt>내 역할</dt><dd><b>팀장</b> · 팀원별 조사 자료 통합, 현장 인터뷰와 멘토 소통, 고객 데이터 수집·관리 방안 조사</dd></div>
+                <div><dt>직접 만든 것</dt><dd>직원용 CRM 시연 웹앱 · 재방문 아이디어 ‘HAIR FLASH’ (빈 예약 시간을 맞는 고객에게 안내)</dd></div>
+                <div><dt>산출물</dt><dd>최종 결과보고서(2026.11) · 발표 자료 · 보도자료 · 고객 여정 인포그래픽</dd></div>
+              </dl>
+              <p className="caseLink">
+                <span>HR 연결</span>
+                팀원마다 다르던 의견을 ‘누가 기록하나, 언제 확인하나, 어떤 업무에 쓰나’라는 기준으로 모았습니다.
+                현장 직원이 실제로 쓸 수 있는 제도를 만드는 일은 인사 제도 설계와 같습니다.
+              </p>
+            </div>
+            <a className="programImg" href="/idbeauty-story.jpg" target="_blank" rel="noreferrer">
+              <img src="/idbeauty-story.jpg" alt="첫 방문 상담부터 다음 방문까지 고객 기록이 이어지는 과정을 7단계로 정리한 인포그래픽 (가상 인물, AI 생성 이미지)" loading="lazy" decoding="async" />
+              <span>고객 여정 인포그래픽 보기</span>
+            </a>
+          </article>
+
+          <div className="ylc">
+            <div className="ylcHead reveal">
+              <h3>YLC · Young Leader Club</h3>
+              <p>2026년 9월부터 활동하고 있습니다. 토론, 공모전, 산업 분석마다 팀이 새로 꾸려졌고, 맡은 역할도 매번 달랐습니다.</p>
+            </div>
+            <ol className="ylcList">
+              {ylc.map((a, i) => (
+                <li className="ylcRow reveal" key={a.name} style={d(i % 3)}>
+                  <span className="num ylcWhen">{a.when}</span>
+                  <div className="ylcName">
+                    <strong>{a.name}</strong>
+                    <small>{a.team}</small>
+                  </div>
+                  <div className="ylcWork">
+                    <p className="ylcTopic">{a.topic}</p>
+                    <p>{a.mine}</p>
+                  </div>
+                  <em>{a.hr}</em>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </section>
+
         {/* 학업: 그룹 목록 */}
         <section className="block" id="study">
           <SectionHead
             label="학업"
             title="수업에서 사람과 조직을 보는 눈을 길렀습니다"
-            text="수업마다 수행한 과제를 함께 적었습니다."
+            text="성적은 전체 평점과 석차만 적고, 수업마다 수행한 과제를 함께 정리했습니다."
           />
+          <dl className="grades">
+            {grades.map(([n, of, label, sub], i) => (
+              <div className="grade reveal" key={label} style={d(i)}>
+                <dt>{label}</dt>
+                <dd><strong className="num">{n}</strong><span className="num">{of}</span></dd>
+                <dd className="gradeSub">{sub}</dd>
+              </div>
+            ))}
+          </dl>
           <div className="study">
             {courses.map((g, gi) => (
               <div className="courseGroup reveal" key={g.group} style={d(gi)}>
@@ -512,19 +648,31 @@ export default function App() {
         {/* 수상 */}
         <section className="awards" id="awards">
           <div className="awardsHead reveal">
-            <p className="secLabel">수상</p>
-            <h2>결과로 남은 네 번의 수상</h2>
-            <p>모두 ‘기록하고 돌아보는 습관’에서 출발한 결과입니다.</p>
+            <p className="secLabel">수상 · 장학</p>
+            <h2>결과로 남은 여섯 번의 수상</h2>
+            <p>모두 ‘기록하고 돌아보는 습관’에서 출발한 결과입니다. 성적으로는 수석 장학금을 세 학기 연속 받았고, 멘토링과 청소년 교육지원도 장학 활동으로 이어 왔습니다.</p>
           </div>
-          <ul className="awardList">
-            {awards.map(([date, result, title], i) => (
-              <li key={title} className="reveal" style={d(i)}>
-                <time className="num">{date}</time>
-                <p>{title}</p>
-                <strong className={result === "대상" ? "top" : ""}>{result}</strong>
-              </li>
-            ))}
-          </ul>
+          <div className="awardCols">
+            <ul className="awardList">
+              {awards.map(([date, result, title], i) => (
+                <li key={title} className="reveal" style={d(i % 3)}>
+                  <time className="num">{date}</time>
+                  <p>{title}</p>
+                  <strong className={result === "대상" ? "top" : ""}>{result}</strong>
+                </li>
+              ))}
+            </ul>
+            <h3 className="awardSub reveal">장학</h3>
+            <ul className="awardList scholar">
+              {scholarships.map(([when, name, note], i) => (
+                <li key={name} className="reveal" style={d(i % 3)}>
+                  <time className="num">{when}</time>
+                  <p>{name}</p>
+                  <strong>{note}</strong>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         {/* 마무리 */}
